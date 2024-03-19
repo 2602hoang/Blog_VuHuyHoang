@@ -1,4 +1,5 @@
 import { GoogleOutlined, InstagramOutlined, JavaScriptOutlined, RadarChartOutlined, SearchOutlined, TwitterOutlined, YoutubeOutlined } from '@ant-design/icons';
+import { Form, Input } from 'antd';
 import React from 'react';
 export default function Footter() {
     return (
@@ -88,9 +89,13 @@ export default function Footter() {
                         Stay up to date
                     </div>
                     <div className="self-stretch flex flex-row items-start justify-between pt-[9px] px-3 pb-[11px] relative gap-[20px] text-sm text-text-gray-300">
-                        <div className="h-full w-full absolute !m-[0] top-[0px] right-[0px] bottom-[0px] left-[0px] rounded-lg bg-gray" />
+                        <Input
+                        placeholder='Your email address'
+                        variant='outlined'
+
+                        className="h-full w-full absolute !m-[0] top-[0px] right-[0px] bottom-[0px] left-[0px] rounded-lg bg-gray" />
                         <div className="relative leading-[20px] inline-block min-w-[126px] z-[1]">
-                            Your email address
+                            
                         </div>
                         <div className="h-5 flex flex-col items-start justify-start pt-0.5 px-0 pb-0 box-border">
                         <SearchOutlined  className="w-[18px] h-[18px] relative overflow-hidden shrink-0 z-[1]" />

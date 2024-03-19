@@ -1,4 +1,4 @@
-import { Card, Flex, Image, Layout, Menu } from 'antd';
+import { Button, Card, Flex, Image, Layout, Menu } from 'antd';
 // import { Header } from 'antd/es/layout/layout';
 import React from 'react';
 import Footter from '../components/Footter';
@@ -31,14 +31,15 @@ export default function Home() {
                                 media?
                             </div>
                         </div>
-                        <div className="rounded bg-brand-primary flex flex-row items-center justify-center py-3.5 px-8 text-center text-base text-neutral-white">
-                            <div className="w-16 relative leading-[24px] font-medium flex items-center justify-center min-w-[64px]">
+                        {/* <div className="rounded bg-brand-primary flex flex-row items-center justify-center  text-center text-base text-neutral-white"> */}
+                            <Button className="bg-brand-primary w-16 relative  font-medium flex items-center justify-center min-w-[50px]">
                                 Register
-                            </div>
-                        </div>
+                            </Button>
+                        {/* </div> */}
                     </div>
-                    <img
-                        className="h-[407px] w-[391px] relative max-w-full lg:flex-1"
+                    <Image
+                        width={400}
+                        className="h-[250px] w-[391px] relative max-w-full lg:flex-1"
                         loading="lazy"
                         alt=""
                         src={baone}
@@ -72,7 +73,7 @@ export default function Home() {
                         <img
                             className="h-12 w-12 relative rounded-lg min-h-[48px]"
                             alt=""
-                            src={baone}
+                            src={gin}
                         />
                         <img
                             className="h-12 w-12 relative rounded-lg min-h-[48px]"
@@ -82,7 +83,7 @@ export default function Home() {
                         <img
                             className="h-12 w-12 relative rounded-lg min-h-[48px]"
                             alt=""
-                            src={baone}
+                            src={gin}
                         />
                         <img
                             className="h-12 w-12 relative rounded-lg min-h-[48px]"
@@ -92,12 +93,17 @@ export default function Home() {
                         <img
                             className="h-12 w-12 relative rounded-lg min-h-[48px]"
                             alt=""
-                            src={baone}
+                            src={gin}
                         />
                         <img
                             className="h-12 w-12 relative rounded-lg min-h-[48px]"
                             alt=""
                             src={baone}
+                        />
+                         <img
+                            className="h-12 w-12 relative rounded-lg min-h-[48px]"
+                            alt=""
+                            src={gin}
                         />
                     </div>
                 </div>
@@ -236,18 +242,23 @@ export default function Home() {
                     <div className="w-[1440px] h-[366px] overflow-x-auto shrink-0 flex flex-row items-center justify-between py-0 px-36 box-border gap-[20px] max-w-full text-xl text-neutral-grey mq825:pl-9 mq825:pr-9 mq825:box-border mq1400:pl-[72px] mq1400:pr-[72px] mq1400:box-border">
                         <Component
                         // image18="/image-18@2x.png"
+                        image={baone}
                         // creatingStreamlinedSafegu="Creating Streamlined Safeguarding Processes with OneRen"
                         />
                         <Component
+                        image={baone}
                         // image18="/image-19@2x.png"
                         // creatingStreamlinedSafegu="What are your safeguarding responsibilities and how can you manage them?"
                         />
                         <Component
+                        image={baone}
                         // image18="/image-20@2x.png"
                         // creatingStreamlinedSafegu="Revamping the Membership Model with Triathlon Australia"
                         />
-                        <Component />
-                        <Component />
+                        <Component 
+                        image={baone} />
+                        <Component 
+                        image={baone}/>
                     </div>
                 </div>
             </section>
