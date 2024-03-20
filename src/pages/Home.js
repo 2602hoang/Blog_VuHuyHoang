@@ -1,56 +1,56 @@
-import { Button, Card, Flex, Image, Layout, Menu } from 'antd';
+import { Button, Carousel, FloatButton, Image, } from 'antd';
 // import { Header } from 'antd/es/layout/layout';
-import React from 'react';
+import React, { useRef, useEffect } from 'react'
+import { useSpring, animated, to } from '@react-spring/web'
+// import { useGesture } from 'react-use-gesture'
+// import React, { useEffect } from 'react';
 import Footter from '../components/Footter';
 import Header from '../components/Header';
 import baone from '../asset/baone.png';
-import gin from'../asset/gin.png';
+import gin from '../asset/gin.png';
+import data from "../asset/data"
 import user from '../asset/userTest.png';
-import logo from'../asset/reactjs.png';
+import logo from '../asset/reactjs.png';
 import Component from '../components/Component';
 import ContactusLegal from '../components/ContactusLagal';
 import { GithubOutlined, MoneyCollectOutlined, StarOutlined, UserOutlined } from '@ant-design/icons';
+// import { useGesture } from '@use-gesture/react';
+import { useGesture } from 'react-use-gesture'
+import Content from '../components/Content';
+// const calcX = (y, ly) => -(y - ly - window.innerHeight / 2) / 20
+// const calcY = (x, lx) => (x - lx - window.innerWidth / 2) / 20
+
+// const wheel = y => {
+//     const imgHeight = window.innerWidth * 0.3 - 20
+//     return `translateY(${-imgHeight * (y < 0 ? 6 : 1) - (y % (imgHeight * 5))}px`
+// }
+
 
 
 export default function Home() {
+
+
     return (
+        // <Carousel effect="fade">
         <div className="w-full relative bg-neutral-white overflow-hidden flex flex-col items-start justify-start tracking-[normal]">
 
             <Header />
 
-            <section className="self-stretch flex flex-row items-start justify-start pt-0 px-0 pb-10 box-border max-w-full text-left text-45xl text-neutral-d-grey font-body-regular-body-3">
-                <div className="flex-1 bg-neutral-silver flex flex-row items-center justify-start py-24 px-36 box-border relative gap-[104px] max-w-full lg:flex-wrap mq825:gap-[104px_52px] mq825:py-[62px] mq825:px-[72px] mq825:box-border mq450:gap-[104px_26px] mq450:pl-5 mq450:pr-5 mq450:box-border">
-                    <div className="flex-1 flex flex-col items-start justify-start gap-[32px] min-w-[427px] max-w-full mq825:gap-[16px_32px] mq825:min-w-full">
-                        <div className="self-stretch flex flex-col items-start justify-start gap-[16px]">
-                            <h1 className="m-0 self-stretch relative text-inherit leading-[76px] font-semibold font-inherit mq825:text-32xl mq825:leading-[61px] mq450:text-19xl mq450:leading-[46px]">
-                                <span>{`Lessons and insights `}</span>
-                                <span className="text-brand-primary">from 8 years</span>
-                            </h1>
-                            <div className="self-stretch relative text-base leading-[24px] text-neutral-grey">
-                                Where to grow your business as a photographer: site or social
-                                media?
-                            </div>
-                        </div>
-                        {/* <div className="rounded bg-brand-primary flex flex-row items-center justify-center  text-center text-base text-neutral-white"> */}
-                            <Button className="bg-brand-primary w-16 relative  font-medium flex items-center justify-center min-w-[50px]">
-                                Register
-                            </Button>
-                        {/* </div> */}
-                    </div>
-                    <Image
-                        width={400}
-                        className="h-[250px] w-[391px] relative max-w-full lg:flex-1"
-                        loading="lazy"
-                        alt=""
-                        src={baone}
-                    />
-                    <div className="!m-[0] absolute bottom-[16px] left-[calc(50%_-_23px)] flex flex-row items-start justify-start gap-[8px] z-[1]">
-                        <div className="h-2.5 w-2.5 relative rounded-[50%] bg-brand-primary" />
-                        <div className="h-2.5 w-2.5 relative rounded-[50%] bg-forestgreen" />
-                        <div className="h-2.5 w-2.5 relative rounded-[50%] bg-forestgreen" />
-                    </div>
-                </div>
-            </section>
+            {/* <div className="w-[1440px] h-auto  overflow-x-auto shrink-0 flex flex-row items-center justify-between py-0 px-36 box-border gap-[20px] max-w-full text-xl text-neutral-grey mq825:pl-9 mq825:pr-9 mq825:box-border mq1400:pl-[72px] mq1400:pr-[72px] mq1400:box-border"> */}
+
+                <Content
+                    a="Where to grow your business as a photographer: site or social
+            media?"
+                    c={baone}
+                />
+               
+
+            {/* </div> */}
+
+
+
+
+
             <section className="self-stretch flex flex-row items-start justify-center pt-0 px-5 pb-10 box-border max-w-full text-center text-17xl text-neutral-d-grey font-body-regular-body-3">
                 <div className="w-[1152px] flex flex-col items-start justify-start gap-[16px] max-w-full">
                     <div className="self-stretch flex flex-row items-start justify-start py-0 px-[21px] box-border max-w-full">
@@ -100,7 +100,7 @@ export default function Home() {
                             alt=""
                             src={baone}
                         />
-                         <img
+                        <img
                             className="h-12 w-12 relative rounded-lg min-h-[48px]"
                             alt=""
                             src={gin}
@@ -239,32 +239,45 @@ export default function Home() {
                             membership income and lot's more.
                         </div>
                     </div>
-                    <div className="w-[1440px] h-[366px] overflow-x-auto shrink-0 flex flex-row items-center justify-between py-0 px-36 box-border gap-[20px] max-w-full text-xl text-neutral-grey mq825:pl-9 mq825:pr-9 mq825:box-border mq1400:pl-[72px] mq1400:pr-[72px] mq1400:box-border">
+                    <div className="w-[1440px] h-auto  overflow-x-auto shrink-0 flex flex-row items-center justify-between py-0 px-36 box-border gap-[20px] max-w-full text-xl text-neutral-grey mq825:pl-9 mq825:pr-9 mq825:box-border mq1400:pl-[72px] mq1400:pr-[72px] mq1400:box-border">
                         <Component
-                        // image18="/image-18@2x.png"
-                        image={baone}
+                            // image18="/image-18@2x.png"
+                            image={baone}
+                            name="meo1"
+                            conten="Creating Streamlined Safeguarding Processes with OneRen"
                         // creatingStreamlinedSafegu="Creating Streamlined Safeguarding Processes with OneRen"
                         />
                         <Component
-                        image={baone}
+                            image={baone}
+                            name="meo2"
+                            conten="What are your safeguarding responsibilities and how can you manage them?"
                         // image18="/image-19@2x.png"
                         // creatingStreamlinedSafegu="What are your safeguarding responsibilities and how can you manage them?"
                         />
                         <Component
-                        image={baone}
+                            image={baone}
+                            name="meo3"
+                            conten="What are your safeguarding responsibilities and how can you manage them?"
                         // image18="/image-20@2x.png"
                         // creatingStreamlinedSafegu="Revamping the Membership Model with Triathlon Australia"
                         />
-                        <Component 
-                        image={baone} />
-                        <Component 
-                        image={baone}/>
+                        <Component
+                            name="meo4"
+                            conten="What are your safeguarding responsibilities and how can you manage them?"
+                            image={baone} />
+                        <Component
+                            name="meo5"
+                            conten="What are your safeguarding responsibilities and how can you manage them?"
+                            image={baone} />
                     </div>
                 </div>
             </section>
 
+            <FloatButton.BackTop />
             <Footter />
 
         </div>
+
+
     )
 }
