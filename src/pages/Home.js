@@ -1,6 +1,6 @@
-import { Anchor, Button, Carousel, FloatButton, Image, } from 'antd';
+import { Anchor, Button, Calendar, Carousel, FloatButton, Image, } from 'antd';
 // import { Header } from 'antd/es/layout/layout';
-import React, { useRef, useEffect } from 'react'
+import React, { useRef, useEffect, useState } from 'react'
 import { useSpring, animated, to } from '@react-spring/web'
 // import { useGesture } from 'react-use-gesture'
 // import React, { useEffect } from 'react';
@@ -11,9 +11,9 @@ import avata from "../asset/AVATA.png";
 import gin from '../asset/gin.png';
 import data from "../asset/data"
 import js from '../asset/js.png'
-import dev from'../asset/dev.png'
+import dev from '../asset/dev.png'
 import sql from '../asset/sql.png'
-import taiwind from'../asset/taiwindcss.png';
+import taiwind from '../asset/taiwindcss.png';
 import css from '../asset/css.png'
 import native from '../asset/native.png'
 import html from '../asset/html.png'
@@ -37,7 +37,10 @@ import Content from '../components/Content';
 
 
 export default function Home() {
-
+    const onPanelChange = (value, mode) => {
+        console.log(value.format('YYYY-MM-DD'), mode);
+    };
+    
 
     return (
         // <Carousel effect="fade">
@@ -45,21 +48,21 @@ export default function Home() {
         <div className="w-full relative bg-neutral-white overflow-hidden flex flex-col items-start justify-start tracking-[normal]">
 
             <Header />
-            
-            
 
+
+        <div className='items-center justify-center px-20 '>
             <Content
-            //    id="part-0"
-                a="I am a student waiting to graduate, so I can do a full-time internship at your company.
-                    My major is Software Engineering, specializing in Front-End programming and user interface design for web and mobile applications. 
-                    I aspire to develop and learn to become a full-stack developer in the future.here to grow your business as a photographer: site or social
-            media?"
+                //    id="part-0"
+                a="I am a student waiting for my diploma, so I can work full-time at the company."
+
+                b="Software Engineering major, mainly Front-End programming, user interface design for Website and Mobie applications.
+                 Looking forward to developing, learning to become a full-stack programmer in the future."
                 c={avata}
             >
 
 
             </Content>
-            
+            </div> 
 
 
             {/* 0 */}
@@ -122,7 +125,7 @@ export default function Home() {
             </section>
             {/* 1 */}
 
-            <section  className="self-stretch flex flex-row items-start justify-start pt-0 px-0 pb-[42px] box-border max-w-full text-center text-9xl text-neutral-d-grey font-body-regular-body-3">
+            <section className=" self-stretch flex flex-row items-start justify-start pt-0 px-0 pb-[42px] box-border max-w-full text-center text-9xl text-neutral-d-grey font-body-regular-body-3">
                 <div className="flex-1 flex flex-row items-start justify-between py-0 px-36 box-border max-w-full gap-[20px] mq825:pl-[72px] mq825:pr-[72px] mq825:box-border mq1400:flex-wrap mq450:pl-5 mq450:pr-5 mq450:box-border">
                     <div className="w-[299px] flex flex-col items-start justify-start pt-2.5 px-0 pb-0 box-border">
                         <div className="self-stretch rounded-lg bg-neutral-white shadow-[0px_2px_4px_rgba(171,_190,_209,_0.2)] flex flex-col items-start justify-start py-6 px-4 gap-[16px]">
@@ -192,22 +195,87 @@ export default function Home() {
                 </div>
             </section>
             {/* 2 */}
-            <section  className="self-stretch flex flex-row items-start justify-start pt-0 pb-12 pr-0 pl-px box-border max-w-full text-left text-17xl text-neutral-d-grey font-body-regular-body-3">
-                <div className="flex-1 bg-neutral-silver flex flex-row items-center justify-between py-16 px-36 box-border max-w-full gap-[20px] mq825:pl-9 mq825:pr-9 mq825:box-border mq1400:flex-wrap mq1400:pl-[72px] mq1400:pr-[72px] mq1400:box-border">
-                    <div className="w-[540px] overflow-hidden shrink-0 flex flex-col items-start justify-start gap-[8px] max-w-full">
-                        <div className="w-[408px] overflow-hidden flex flex-col items-start justify-start max-w-full">
-                            <h1 className="m-0 self-stretch relative text-inherit leading-[44px] font-semibold font-inherit mq825:text-10xl mq825:leading-[35px] mq450:text-3xl mq450:leading-[26px]">
-                                <span>{`Helping a local `}</span>
-                                <span className="text-brand-primary">
-                                    business reinvent itself
-                                </span>
-                            </h1>
-                        </div>
-                        <div className="self-stretch relative text-base leading-[24px] text-text-gray-900">
-                            We reached here with our hard work and dedication
+           
+            {/* 3 */}
+            <section className=" flex flex-row items-center justify-center pt-0 pb-[94.59999999999992px] pr-0 pl-px box-border max-w-full text-center text-17xl text-neutral-d-grey font-body-regular-body-3 mq825:pb-[61px] mq825:box-border">
+                <div className="flex flex-col items-center justify-start gap-[16px] max-w-full">
+                    <div id="part-2" className="w-[1150px] flex flex-col items-center justify-start py-0 px-5 box-border gap-[8px] max-w-full">
+                        <h1 className="m-0 self-stretch relative text-inherit leading-[44px] font-semibold font-inherit mq825:text-10xl mq825:leading-[35px] mq450:text-3xl mq450:leading-[26px]">
+                            SKILLS ABOUT ME
+                        </h1>
+                        <div className="w-[628px] relative text-base leading-[24px] font-semibold  text-orange-500 inline-block max-w-full">
+                            Programming Skills:
+                            <br />
+                            ⭐ JavaScript/ HTML/ CSS/ ReactJS/ React Native/ Antd/ Tailwindcss/ SQL/  ⭐
+                            <br />
+                            Java/ C#/ C++/
                         </div>
                     </div>
-                    <div className="w-[540px] overflow-hidden shrink-0 flex flex-col items-center justify-start gap-[40px] max-w-full text-9xl mq825:gap-[20px_40px]">
+                    <div className=" w-full h-[450px]  overflow-x-auto shrink-0 flex flex-row items-center justify-between py-0 px-36 box-border gap-[20px] max-w-full text-xl text-neutral-grey mq825:pl-9 mq825:pr-9 mq825:box-border mq1400:pl-[72px] mq1400:pr-[72px] mq1400:box-border">
+                        <Component
+                            // image18="/image-18@2x.png"
+                            image={dev}
+                            name="JavaScript"
+                            // conten="Creating Streamlined Safeguarding Processes with OneRen"
+                            imgs={js}
+                        // creatingStreamlinedSafegu="Creating Streamlined Safeguarding Processes with OneRen"
+                        />
+                        <Component
+                            image={dev}
+                            name="HTML"
+                            // conten="What are your safeguarding "
+                            imgs={html}
+                        // image18="/image-19@2x.png"
+                        // creatingStreamlinedSafegu="What are your safeguarding responsibilities and how can you manage them?"
+                        />
+                        <Component
+                            image={dev}
+                            name="CSS"
+                            // conten="What are your safeguarding responsibilities and how can you manage them?"
+                            imgs={css}
+                        // image18="/image-20@2x.png"
+                        // creatingStreamlinedSafegu="Revamping the Membership Model with Triathlon Australia"
+                        />
+                        <Component
+                            name="ReactJS"
+                            // conten="What are your safeguarding responsibilities and how can you manage them?"
+                            image={dev}
+                            imgs={logo}
+                        />
+                        <Component
+                            name="React Native"
+                            // conten="What are your safeguarding responsibilities and how can you manage them?"
+                            image={dev}
+                            imgs={native}
+                        />
+                        <Component
+                            name="Ant Design"
+                            // conten="What are your safeguarding responsibilities and how can you manage them?"
+                            image={dev}
+                            imgs={antd}
+                        />
+                        <Component
+                            name="SQL"
+                            // conten="What are your safeguarding responsibilities and how can you manage them?"
+                            image={dev}
+                            imgs={sql}
+                        />
+                        <Component
+                            name="Tailwindcss"
+                            // conten="What are your safeguarding responsibilities and how can you manage them?"
+                            image={dev}
+                            imgs={taiwind}
+                        />
+
+                    </div>
+                </div>
+            </section>
+            <section className="self-stretch flex flex-row items-start justify-start pt-0 pb-12 pr-0 pl-px box-border max-w-full text-left text-17xl text-neutral-d-grey font-body-regular-body-3">
+                <div className="flex-1 bg-white flex flex-row items-center justify-between py-16 px-36 box-border max-w-full gap-[20px] mq825:pl-9 mq825:pr-9 mq825:box-border mq1400:flex-wrap mq1400:pl-[72px] mq1400:pr-[72px] mq1400:box-border">
+                    
+                    <Calendar  className=' w-auto  border-4 border-b-slate-900 rounded-md border-solid'  onPanelChange={onPanelChange} />
+                    
+                    {/* <div className="w-[540px] overflow-hidden shrink-0 flex flex-col items-center justify-start gap-[40px] max-w-full text-9xl mq825:gap-[20px_40px]">
                         <div className="self-stretch overflow-hidden flex flex-row items-center justify-start gap-[30px] mq825:flex-wrap">
                             <UserOutlined />
                             <ContactusLegal
@@ -238,91 +306,18 @@ export default function Home() {
                                 propOverflow="hidden"
                             />
                         </div>
-                    </div>
-                </div>
-            </section>
-            {/* 3 */}
-            <section className="flex flex-row items-start justify-start pt-0 pb-[94.59999999999992px] pr-0 pl-px box-border max-w-full text-center text-17xl text-neutral-d-grey font-body-regular-body-3 mq825:pb-[61px] mq825:box-border">
-                <div className="flex flex-col items-center justify-start gap-[16px] max-w-full">
-                    <div id="part-2" className="w-[1150px] flex flex-col items-center justify-start py-0 px-5 box-border gap-[8px] max-w-full">
-                        <h1 className="m-0 self-stretch relative text-inherit leading-[44px] font-semibold font-inherit mq825:text-10xl mq825:leading-[35px] mq450:text-3xl mq450:leading-[26px]">
-                            SKILLS ABOUT ME
-                        </h1>
-                        <div className="w-[628px] relative text-base leading-[24px] font-semibold  text-orange-500 inline-block max-w-full">
-                            Programming Skills:
-                            <br />
-                            JavaScript/ HTML/ CSS/ ReactJS/ React Native/ Antd/
-                            <br />
-                            SQL/ Java/ C#/ C++/ Tailwindcss/
-                        </div>
-                    </div>
-                    <div  className="w-[1440px] h-auto  overflow-x-auto shrink-0 flex flex-row items-center justify-between py-0 px-36 box-border gap-[20px] max-w-full text-xl text-neutral-grey mq825:pl-9 mq825:pr-9 mq825:box-border mq1400:pl-[72px] mq1400:pr-[72px] mq1400:box-border">
-                        <Component
-                            // image18="/image-18@2x.png"
-                            image={dev}
-                            name="JavaScript"
-                            conten="Creating Streamlined Safeguarding Processes with OneRen"
-                            imgs={js}
-                        // creatingStreamlinedSafegu="Creating Streamlined Safeguarding Processes with OneRen"
-                        />
-                        <Component
-                            image={dev}
-                            name="HTML"
-                            conten="What are your safeguarding "
-                            imgs={html}
-                        // image18="/image-19@2x.png"
-                        // creatingStreamlinedSafegu="What are your safeguarding responsibilities and how can you manage them?"
-                        />
-                        <Component
-                            image={dev}
-                            name="CSS"
-                            conten="What are your safeguarding responsibilities and how can you manage them?"
-                            imgs={css}
-                        // image18="/image-20@2x.png"
-                        // creatingStreamlinedSafegu="Revamping the Membership Model with Triathlon Australia"
-                        />
-                        <Component
-                            name="ReactJS"
-                            conten="What are your safeguarding responsibilities and how can you manage them?"
-                            image={dev}
-                            imgs={logo}
-                        />
-                        <Component
-                            name="React Native"
-                            conten="What are your safeguarding responsibilities and how can you manage them?"
-                            image={dev}
-                            imgs={native}
-                        />
-                        <Component
-                            name="Ant Design"
-                            conten="What are your safeguarding responsibilities and how can you manage them?"
-                            image={dev}
-                            imgs={antd}
-                        />
-                        <Component
-                            name="SQL"
-                            conten="What are your safeguarding responsibilities and how can you manage them?"
-                            image={dev}
-                            imgs={sql}
-                        />
-                        <Component
-                            name="Tailwindcss"
-                            conten="What are your safeguarding responsibilities and how can you manage them?"
-                            image={dev}
-                            imgs={taiwind}
-                        />
-                        
-                    </div>
+
+                    </div> */}
                 </div>
             </section>
 
 
             <FloatButton.BackTop />
 
-            <Footter  />
+            <Footter />
 
         </div>
 
-        
+
     )
 }

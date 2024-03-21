@@ -54,17 +54,18 @@ export default function Header() {
 
 
     return (
-        <header className="self-stretch bg-neutral-silver overflow-hidden flex flex-row items-start justify-between py-[22px] pr-[120px] pl-[105px] box-border top-[0] z-[99] sticky gap-[20px] max-w-full text-center text-sm text-brand-primary font-body-regular-body-3 mq825:pl-[52px] mq825:pr-[60px] mq825:box-border mq450:pl-5 mq450:pr-5 mq450:box-border">
+        <header className=" self-stretch bg-neutral-silver overflow-hidden flex flex-row items-center justify-between py-[22px] pr-[120px] pl-[105px] box-border top-[0] z-[99] sticky gap-[20px] max-w-full text-center text-sm text-brand-primary font-body-regular-body-3 mq825:pl-[52px] mq825:pr-[60px] mq825:box-border mq450:pl-5 mq450:pr-5 mq450:box-border">
            
            
-            <div className="w-[196px] flex flex-col items-start justify-start pt-2 px-0 pb-0 box-border">
+            <div className="w-[196px] flex flex-col items-start justify-start mt-8 px-0 pb-0 box-border">
                 
                 <div className="w-[154.5px] h-6 flex flex-row items-end justify-start gap-[8px]">
                     <img
-                        className="h-[50px] w-[60px] relative min-h-[50px] mt-6 rounded-lg "
+                        className="h-[80px] w-[80px] relative min-h-[50px] pt-1 rounded-lg "
                         // className="self-stretch h-[150px] relative rounded-lg max-w-full overflow-hidden shrink-0 object-cover"
                         loading="lazy"
-                        alt="LOGO"
+                        
+                        title='VU HUY HOANG'
                         src={dev}
                     />
                     
@@ -84,12 +85,14 @@ export default function Header() {
                     <Button
                         type='text'
                         // danger
+                        href='#part-0'
                         className="relative leading-[24px] font-medium inline-block min-w-[46px]">
                         About
                     </Button>
                     
                     <Button
                         type='text'
+                        href='/'
                         //  danger
                         className="relative leading-[24px] font-medium inline-block min-w-[57px]">
                         Portfolio
@@ -111,6 +114,7 @@ export default function Header() {
                     </Button> */}
                     <Button
                         type='text'
+                        href='#part-3'
                         className="relative leading-[24px] font-medium  inline-block min-w-[31px]">
                         Contact
                     </Button>
@@ -192,7 +196,7 @@ export default function Header() {
                 </Modal>
             </div>
             <Anchor
-             direction="vertical"
+             direction="horizontal"
             items={[
                 {
                     key: 'part-5',
