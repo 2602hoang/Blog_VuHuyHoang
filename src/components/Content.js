@@ -1,11 +1,16 @@
-import { Button, Image } from 'antd';
+import { Anchor, Button, Image } from 'antd';
 import React from 'react';
 import baone from "../asset/baone.png"
 
 const Content = ({ a, c }) => (
-     <section className="self-stretch flex flex-row items-start justify-start pt-0 px-0 pb-10 box-border max-w-full text-left text-45xl text-neutral-d-grey font-body-regular-body-3">
 
+    <section
+        id="part-5"
+        className="self-stretch flex flex-row items-start justify-start pt-0 px-0 pb-10 box-border max-w-full text-left text-45xl text-neutral-d-grey font-body-regular-body-3">
+
+        
         <div className="flex-1 bg-neutral-silver flex flex-row items-center justify-start py-24 px-36 box-border relative gap-[104px] max-w-full lg:flex-wrap mq825:gap-[104px_52px] mq825:py-[62px] mq825:px-[72px] mq825:box-border mq450:gap-[104px_26px] mq450:pl-5 mq450:pr-5 mq450:box-border">
+
             <div className="flex-1 flex flex-col items-start justify-start gap-[32px] min-w-[427px] max-w-full mq825:gap-[16px_32px] mq825:min-w-full">
                 <div className="self-stretch flex flex-col items-start justify-start gap-[16px]">
                     <h1 className="m-0 self-stretch relative text-inherit leading-[76px] font-semibold font-inherit mq825:text-32xl mq825:leading-[61px] mq450:text-19xl mq450:leading-[46px]">
@@ -28,7 +33,7 @@ const Content = ({ a, c }) => (
 
 
             <Image
-                width={350}
+                width={200}
                 className="h-[250px] w-[391px] relative max-w-full lg:flex-1 rounded-3xl border-orange-50 border-y-indigo-500 border-solid outline-offset-2 "
                 loading="lazy"
                 alt=""
@@ -37,7 +42,7 @@ const Content = ({ a, c }) => (
 
 
             <div className="!m-[0] absolute bottom-[16px] left-[calc(50%_-_23px)] flex flex-row items-start justify-start gap-[8px] z-[1]">
-{/* 
+                {/* 
                 <div className="h-2.5 w-2.5 relative rounded-[50%] bg-brand-primary" />
                 <div className="h-2.5 w-2.5 relative rounded-[50%] bg-forestgreen" />
                 <div className="h-2.5 w-2.5 relative rounded-[50%] bg-forestgreen" /> */}
@@ -47,7 +52,8 @@ const Content = ({ a, c }) => (
 
             </div>
         </div>
-     </section>
+        
+    </section>
 
 );
 export default Content;

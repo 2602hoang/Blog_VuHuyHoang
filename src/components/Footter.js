@@ -1,10 +1,12 @@
-import { AntDesignOutlined, FacebookFilled, GithubOutlined, GoogleOutlined, Html5Outlined, InstagramOutlined, JavaScriptOutlined, RadarChartOutlined, SearchOutlined, TwitterOutlined, YoutubeOutlined } from '@ant-design/icons';
+import { AntDesignOutlined, ArrowRightOutlined, FacebookFilled, GithubOutlined, GoogleOutlined, Html5Outlined, InstagramOutlined, JavaScriptOutlined, RadarChartOutlined, SearchOutlined, TwitterOutlined, YoutubeOutlined } from '@ant-design/icons';
 import { Button, Form, Input } from 'antd';
 import React from 'react';
 export default function Footter() {
     return (
-        <footer className="self-stretch bg-neutral-black flex flex-row items-start justify-between py-16 px-[165px] box-border max-w-full gap-[20px] z-[1] mq825:pl-[82px] mq825:pr-[82px] mq825:box-border mq1400:flex-wrap mq450:pl-5 mq450:pr-5 mq450:box-border">
+        <footer id="part-3" className="self-stretch bg-neutral-black flex flex-row items-start justify-between py-16 px-[165px] box-border max-w-full gap-[20px] z-[1] mq825:pl-[82px] mq825:pr-[82px] mq825:box-border mq1400:flex-wrap mq450:pl-5 mq450:pr-5 mq450:box-border">
+
             <div className="w-[350px] overflow-hidden shrink-0 flex flex-col items-start justify-start gap-[40px] min-w-[350px] max-w-full text-left text-sm text-neutral-silver font-body-regular-body-3 mq825:min-w-full mq1400:flex-1 mq450:gap-[20px_40px]">
+
                 <div className="w-[191px] h-[29.7px] flex flex-row items-start justify-start gap-[9.900000000000093px]">
                     <JavaScriptOutlined
                         className="h-[28.6px] max-w-full relative min-h-[30px] shrink-0 [debug_commit:1cbd860]"
@@ -37,41 +39,52 @@ export default function Footter() {
                 </div>
                 <div className="self-stretch overflow-hidden flex flex-col items-start justify-start gap-[8px]">
                     <div className="self-stretch relative leading-[20px]">
-                        Copyright © 2001 League Of Legends ltd.
+                    Contact:
                     </div>
                     <div className="self-stretch relative leading-[20px]">
-                        All rights reserved
+                        
+                       
+                        Email: vuhuyhoangboj@gmail.com
+                        <br/>
+                        Tel: +84 917 789 964
+                        <br/>
+                        I look forward to hearing from potential employers.
+                        <br/>
+                    Thank you!
                     </div>
                 </div>
-                <div className="pt-1.5 h-8 overflow-hidden shrink-0 flex flex-row items-start justify-start gap-[16px]">
-                   <Button type='link' href='https://www.facebook.com/VHH26022001/'>
-                    <FacebookFilled 
-                        className="h-8 w-8 relative min-h-[32px]"
-                        loading="lazy"
-                        alt=""
+                <a>Social network here 👇</a>
 
-                    />
+                <div className=" h-8 overflow-hidden shrink-0 flex flex-row items-start justify-start gap-[16px]">
+                   <ArrowRightOutlined style={{marginTop:"10px"}}/>
+                    <Button type='link' href='https://www.facebook.com/VHH26022001/'>
+                        <FacebookFilled
+                            className="h-8 w-8 relative min-h-[32px]"
+                            loading="lazy"
+                            alt=""
+
+                        />
                     </Button>
                     <Button type='link' href='https://vuhuyhoangcv.wordpress.com/'>
-                    <GoogleOutlined
-                        className="h-8 w-8 relative min-h-[32px]"
-                        alt=""
+                        <GoogleOutlined
+                            className="h-8 w-8 relative min-h-[32px]"
+                            alt=""
 
-                    />
+                        />
                     </Button>
                     <Button type='link' href='https://github.com/2602hoang'>
-                    <GithubOutlined 
-                        className="h-8 w-8 relative min-h-[32px]"
-                        alt=""
+                        <GithubOutlined
+                            className="h-8 w-8 relative min-h-[32px]"
+                            alt=""
 
-                    />
+                        />
                     </Button>
                     <Button type='link'>
-                    <TwitterOutlined
-                        className="h-8 w-8 relative min-h-[32px]"
-                        alt=""
+                        <TwitterOutlined
+                            className="h-8 w-8 relative min-h-[32px]"
+                            alt=""
 
-                    />
+                        />
                     </Button>
                 </div>
             </div>

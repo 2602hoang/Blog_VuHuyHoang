@@ -1,4 +1,4 @@
-import { Button, Carousel, FloatButton, Image, } from 'antd';
+import { Anchor, Button, Carousel, FloatButton, Image, } from 'antd';
 // import { Header } from 'antd/es/layout/layout';
 import React, { useRef, useEffect } from 'react'
 import { useSpring, animated, to } from '@react-spring/web'
@@ -10,6 +10,13 @@ import baone from '../asset/baone.png';
 import avata from "../asset/AVATA.png";
 import gin from '../asset/gin.png';
 import data from "../asset/data"
+import js from '../asset/js.png'
+import dev from'../asset/dev.png'
+import sql from '../asset/sql.png'
+import taiwind from'../asset/taiwindcss.png';
+import css from '../asset/css.png'
+import native from '../asset/native.png'
+import html from '../asset/html.png'
 import user from '../asset/userTest.png';
 import logo from '../asset/reactjs.png';
 import Component from '../components/Component';
@@ -34,28 +41,29 @@ export default function Home() {
 
     return (
         // <Carousel effect="fade">
+        // <div className="w-full relative bg-neutral-white overflow-hidden flex flex-row items-start justify-start" >
         <div className="w-full relative bg-neutral-white overflow-hidden flex flex-col items-start justify-start tracking-[normal]">
 
             <Header />
+            
+            
 
-            {/* <div className="w-[1440px] h-auto  overflow-x-auto shrink-0 flex flex-row items-center justify-between py-0 px-36 box-border gap-[20px] max-w-full text-xl text-neutral-grey mq825:pl-9 mq825:pr-9 mq825:box-border mq1400:pl-[72px] mq1400:pr-[72px] mq1400:box-border"> */}
-
-                <Content
-                    a="WI am a student waiting to graduate, so I can do a full-time internship at your company.
+            <Content
+            //    id="part-0"
+                a="I am a student waiting to graduate, so I can do a full-time internship at your company.
                     My major is Software Engineering, specializing in Front-End programming and user interface design for web and mobile applications. 
                     I aspire to develop and learn to become a full-stack developer in the future.here to grow your business as a photographer: site or social
             media?"
-                    c={avata}
-                />
-               
-
-            {/* </div> */}
+                c={avata}
+            >
 
 
+            </Content>
+            
 
 
-
-            <section className="self-stretch flex flex-row items-start justify-center pt-0 px-5 pb-10 box-border max-w-full text-center text-17xl text-neutral-d-grey font-body-regular-body-3">
+            {/* 0 */}
+            <section id="part-1" className="self-stretch flex flex-row items-start justify-center pt-0 px-5 pb-10 box-border max-w-full text-center text-17xl text-neutral-d-grey font-body-regular-body-3">
                 <div className="w-[1152px] flex flex-col items-start justify-start gap-[16px] max-w-full">
                     <div className="self-stretch flex flex-row items-start justify-start py-0 px-[21px] box-border max-w-full">
                         <div className="flex-1 flex flex-col items-start justify-start gap-[8px] max-w-full">
@@ -113,7 +121,8 @@ export default function Home() {
                 </div>
             </section>
             {/* 1 */}
-            <section className="self-stretch flex flex-row items-start justify-start pt-0 px-0 pb-[42px] box-border max-w-full text-center text-9xl text-neutral-d-grey font-body-regular-body-3">
+
+            <section  className="self-stretch flex flex-row items-start justify-start pt-0 px-0 pb-[42px] box-border max-w-full text-center text-9xl text-neutral-d-grey font-body-regular-body-3">
                 <div className="flex-1 flex flex-row items-start justify-between py-0 px-36 box-border max-w-full gap-[20px] mq825:pl-[72px] mq825:pr-[72px] mq825:box-border mq1400:flex-wrap mq450:pl-5 mq450:pr-5 mq450:box-border">
                     <div className="w-[299px] flex flex-col items-start justify-start pt-2.5 px-0 pb-0 box-border">
                         <div className="self-stretch rounded-lg bg-neutral-white shadow-[0px_2px_4px_rgba(171,_190,_209,_0.2)] flex flex-col items-start justify-start py-6 px-4 gap-[16px]">
@@ -183,7 +192,7 @@ export default function Home() {
                 </div>
             </section>
             {/* 2 */}
-            <section className="self-stretch flex flex-row items-start justify-start pt-0 pb-12 pr-0 pl-px box-border max-w-full text-left text-17xl text-neutral-d-grey font-body-regular-body-3">
+            <section  className="self-stretch flex flex-row items-start justify-start pt-0 pb-12 pr-0 pl-px box-border max-w-full text-left text-17xl text-neutral-d-grey font-body-regular-body-3">
                 <div className="flex-1 bg-neutral-silver flex flex-row items-center justify-between py-16 px-36 box-border max-w-full gap-[20px] mq825:pl-9 mq825:pr-9 mq825:box-border mq1400:flex-wrap mq1400:pl-[72px] mq1400:pr-[72px] mq1400:box-border">
                     <div className="w-[540px] overflow-hidden shrink-0 flex flex-col items-start justify-start gap-[8px] max-w-full">
                         <div className="w-[408px] overflow-hidden flex flex-col items-start justify-start max-w-full">
@@ -235,63 +244,85 @@ export default function Home() {
             {/* 3 */}
             <section className="flex flex-row items-start justify-start pt-0 pb-[94.59999999999992px] pr-0 pl-px box-border max-w-full text-center text-17xl text-neutral-d-grey font-body-regular-body-3 mq825:pb-[61px] mq825:box-border">
                 <div className="flex flex-col items-center justify-start gap-[16px] max-w-full">
-                    <div className="w-[1150px] flex flex-col items-center justify-start py-0 px-5 box-border gap-[8px] max-w-full">
+                    <div id="part-2" className="w-[1150px] flex flex-col items-center justify-start py-0 px-5 box-border gap-[8px] max-w-full">
                         <h1 className="m-0 self-stretch relative text-inherit leading-[44px] font-semibold font-inherit mq825:text-10xl mq825:leading-[35px] mq450:text-3xl mq450:leading-[26px]">
-                            Caring is the new marketing
+                            SKILLS ABOUT ME
                         </h1>
-                        <div className="w-[628px] relative text-base leading-[24px] text-neutral-grey inline-block max-w-full">
-                            The Nexcent blog is the best place to read about the latest
-                            membership insights, trends and more. See who's joining the
-                            community, read about how our community are increasing their
-                            membership income and lot's more.
+                        <div className="w-[628px] relative text-base leading-[24px] font-semibold  text-orange-500 inline-block max-w-full">
+                            Programming Skills:
+                            <br />
+                            JavaScript/ HTML/ CSS/ ReactJS/ React Native/ Antd/
+                            <br />
+                            SQL/ Java/ C#/ C++/ Tailwindcss/
                         </div>
                     </div>
-                    <div className="w-[1440px] h-auto  overflow-x-auto shrink-0 flex flex-row items-center justify-between py-0 px-36 box-border gap-[20px] max-w-full text-xl text-neutral-grey mq825:pl-9 mq825:pr-9 mq825:box-border mq1400:pl-[72px] mq1400:pr-[72px] mq1400:box-border">
+                    <div  className="w-[1440px] h-auto  overflow-x-auto shrink-0 flex flex-row items-center justify-between py-0 px-36 box-border gap-[20px] max-w-full text-xl text-neutral-grey mq825:pl-9 mq825:pr-9 mq825:box-border mq1400:pl-[72px] mq1400:pr-[72px] mq1400:box-border">
                         <Component
                             // image18="/image-18@2x.png"
-                            image={antd}
-                            name="meo1"
+                            image={dev}
+                            name="JavaScript"
                             conten="Creating Streamlined Safeguarding Processes with OneRen"
-                            imgs={gin}
+                            imgs={js}
                         // creatingStreamlinedSafegu="Creating Streamlined Safeguarding Processes with OneRen"
                         />
                         <Component
-                            image={baone}
-                            name="meo2"
+                            image={dev}
+                            name="HTML"
                             conten="What are your safeguarding "
-                            imgs={baone}
+                            imgs={html}
                         // image18="/image-19@2x.png"
                         // creatingStreamlinedSafegu="What are your safeguarding responsibilities and how can you manage them?"
                         />
                         <Component
-                            image={antd}
-                            name="meo3"
+                            image={dev}
+                            name="CSS"
                             conten="What are your safeguarding responsibilities and how can you manage them?"
-                            imgs={user}
+                            imgs={css}
                         // image18="/image-20@2x.png"
                         // creatingStreamlinedSafegu="Revamping the Membership Model with Triathlon Australia"
                         />
                         <Component
-                            name="meo4"
+                            name="ReactJS"
                             conten="What are your safeguarding responsibilities and how can you manage them?"
-                            image={baone} 
-                            imgs={gin}
-                            />
+                            image={dev}
+                            imgs={logo}
+                        />
                         <Component
-                            name="meo5"
+                            name="React Native"
                             conten="What are your safeguarding responsibilities and how can you manage them?"
-                            image={antd} 
-                            imgs={baone}
-                            />
+                            image={dev}
+                            imgs={native}
+                        />
+                        <Component
+                            name="Ant Design"
+                            conten="What are your safeguarding responsibilities and how can you manage them?"
+                            image={dev}
+                            imgs={antd}
+                        />
+                        <Component
+                            name="SQL"
+                            conten="What are your safeguarding responsibilities and how can you manage them?"
+                            image={dev}
+                            imgs={sql}
+                        />
+                        <Component
+                            name="Tailwindcss"
+                            conten="What are your safeguarding responsibilities and how can you manage them?"
+                            image={dev}
+                            imgs={taiwind}
+                        />
+                        
                     </div>
                 </div>
             </section>
 
+
             <FloatButton.BackTop />
-            <Footter />
+
+            <Footter  />
 
         </div>
 
-
+        
     )
 }

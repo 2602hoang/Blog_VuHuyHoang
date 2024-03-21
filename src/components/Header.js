@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import logo from '../asset/reactjs.png';
-import user from '../asset/userTest.png'
-import { Button, Image, Modal, Popconfirm } from 'antd';
+import dev from '../asset/dev.png'
+import { Anchor, Button, Image, Modal, Popconfirm } from 'antd';
 import FromLogin from './FromLogin';
 import FromSigup from './FromSigup';
 
@@ -55,15 +55,19 @@ export default function Header() {
 
     return (
         <header className="self-stretch bg-neutral-silver overflow-hidden flex flex-row items-start justify-between py-[22px] pr-[120px] pl-[105px] box-border top-[0] z-[99] sticky gap-[20px] max-w-full text-center text-sm text-brand-primary font-body-regular-body-3 mq825:pl-[52px] mq825:pr-[60px] mq825:box-border mq450:pl-5 mq450:pr-5 mq450:box-border">
+           
+           
             <div className="w-[196px] flex flex-col items-start justify-start pt-2 px-0 pb-0 box-border">
+                
                 <div className="w-[154.5px] h-6 flex flex-row items-end justify-start gap-[8px]">
                     <img
-                        className="h-[40px] w-[80px] relative min-h-[50px] mt-6 rounded-lg "
+                        className="h-[50px] w-[60px] relative min-h-[50px] mt-6 rounded-lg "
                         // className="self-stretch h-[150px] relative rounded-lg max-w-full overflow-hidden shrink-0 object-cover"
                         loading="lazy"
                         alt="LOGO"
-                        src={user}
+                        src={dev}
                     />
+                    
                     {/* <div className="h-[22.3px] flex-1 flex flex-col items-start justify-end pt-0 px-0 pb-[1.6000000000003638px] box-border">
                             <img
                                 className="self-stretch h-[50px] relative max-w-full overflow-hidden shrink-0"
@@ -76,24 +80,26 @@ export default function Header() {
             </div>
             <nav className="m-0 w-[588px] flex flex-col items-start justify-start pt-2 px-0 pb-0 box-border max-w-full lg:hidden">
                 <nav className="m-0 self-stretch flex flex-row items-start justify-between gap-[20px] text-left text-base text-text-gray-900 font-body-regular-body-3">
+                    
                     <Button
                         type='text'
                         // danger
                         className="relative leading-[24px] font-medium inline-block min-w-[46px]">
-                        Home
+                        About
                     </Button>
+                    
                     <Button
                         type='text'
                         //  danger
                         className="relative leading-[24px] font-medium inline-block min-w-[57px]">
-                        Service
+                        Portfolio
                     </Button>
                     <Button
                         type='text'
                         className="relative leading-[24px] font-medium inline-block min-w-[58px]">
-                        Feature
+                        Expertise
                     </Button>
-                    <Button
+                    {/* <Button
                         type='text'
                         className="relative leading-[24px] font-medium inline-block min-w-[60px]">
                         Product
@@ -102,11 +108,11 @@ export default function Header() {
                         type='text'
                         className="relative leading-[24px] font-medium inline-block min-w-[86px]">
                         Testimonial
-                    </Button>
+                    </Button> */}
                     <Button
                         type='text'
                         className="relative leading-[24px] font-medium  inline-block min-w-[31px]">
-                        FAQ
+                        Contact
                     </Button>
                 </nav>
             </nav>
@@ -185,6 +191,33 @@ export default function Header() {
                         <FromSigup />
                 </Modal>
             </div>
+            <Anchor
+             direction="vertical"
+            items={[
+                {
+                    key: 'part-5',
+                    href: '#part-5',
+                    title: 'About Me',
+                },
+                {
+                    key: 'part-1',
+                    href: '#part-1',
+                    title: 'Expertise',
+                },
+                {
+                    key: 'part-2',
+                    href: '#part-2',
+                    title: 'Sklils',
+                },
+                {
+                    key: 'part-3',
+                    href: '#part-3',
+                    title: 'Contact',
+                },
+            ]}
+        />
+            
+            
         </header>
     )
 }
