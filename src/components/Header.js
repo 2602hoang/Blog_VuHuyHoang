@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import logo from '../asset/reactjs.png';
-import dev from '../asset/dev.png'
+import dev from '../asset/AAA.png'
 import { Anchor, Button, Image, Modal, Popconfirm } from 'antd';
 import FromLogin from './FromLogin';
 import FromSigup from './FromSigup';
@@ -61,7 +61,7 @@ export default function Header() {
                 
                 <div className="w-[154.5px] h-6 flex flex-row items-end justify-start gap-[8px]">
                     <img
-                        className="h-[80px] w-[80px] relative min-h-[50px] pt-1 rounded-lg "
+                        className="h-[80px] w-[80px] relative min-h-[50px] mt-4 pt-2 rounded-lg "
                         // className="self-stretch h-[150px] relative rounded-lg max-w-full overflow-hidden shrink-0 object-cover"
                         loading="lazy"
                         
@@ -95,10 +95,11 @@ export default function Header() {
                         href='/'
                         //  danger
                         className="relative leading-[24px] font-medium inline-block min-w-[57px]">
-                        Portfolio
+                        Home
                     </Button>
                     <Button
                         type='text'
+                        href='#part-2'
                         className="relative leading-[24px] font-medium inline-block min-w-[58px]">
                         Expertise
                     </Button>
@@ -206,7 +207,7 @@ export default function Header() {
                 {
                     key: 'part-1',
                     href: '#part-1',
-                    title: 'Expertise',
+                    title: 'Projects',
                 },
                 {
                     key: 'part-2',

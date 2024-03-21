@@ -1,4 +1,4 @@
-import { Anchor, Button, Image, Modal } from 'antd';
+import { Anchor, Button, Drawer, Image, Modal } from 'antd';
 import React, { useEffect, useState } from 'react';
 import baone from "../asset/baone.png"
 import cv from "../asset/CV.png"
@@ -6,20 +6,12 @@ import cv from "../asset/CV.png"
 
 
 export default function Content({ a, b, c }) {
-    const [time, setTime] = useState('');
-    useEffect(() => {
-        const interval = setInterval(() => {
-            const now = new Date();
-            const hours = now.getHours().toString().padStart(2, '0');
-            const minutes = now.getMinutes().toString().padStart(2, '0');
-            const seconds = now.getSeconds().toString().padStart(2, '0');
-            const timeString = `${hours}:${minutes}:${seconds}`;
-            setTime(timeString);
-        }, 1000);
-
-        return () => clearInterval(interval);
-    }, []);
+    // const [placement, setPlacement] = useState('left');
+    // const onChange = (e) => {
+    //     setPlacement(e.target.left);
+    //   };
     const [open, setOpen] = useState(false);
+    const [open1, setOpen1] = useState(false);
     const showModal = () => {
         setOpen(true);
     };
@@ -31,25 +23,43 @@ export default function Content({ a, b, c }) {
         console.log(e);
         setOpen(false);
     };
+    const showDrawer = () => {
+        setOpen1(true);
+    };
+    const onClose = () => {
+        setOpen1(false);
+    };
     return (
 
 
         <section
             id="part-5"
             className="bg-white  self-stretch flex flex-row items-start justify-start pt-0 px-0 pb-10 box-border w-full text-left text-45xl text-neutral-d-grey font-body-regular-body-3">
-
+            <Drawer title="About Me " width={900} onClose={onClose} open={open1}
+            placement="left"
+            // closable={false}
+            // extra={
+            //     <Button onClick={onClose}>Cancel</Button>
+            // }
+            >
+                <p>Some contents...</p>
+                <p>Some contents...</p>
+                <p>Some contents...</p>
+            </Drawer>
 
             <div className="flex-1 bg-white flex flex-row items-center justify-start py-24 px-36 box-border relative gap-[104px] max-w-full lg:flex-wrap mq825:gap-[104px_52px] mq825:py-[62px] mq825:px-[72px] mq825:box-border mq450:gap-[104px_26px] mq450:pl-5 mq450:pr-5 mq450:box-border">
 
                 <div className="flex-1 flex flex-col items-start justify-start gap-[32px] min-w-[427px] max-w-full mq825:gap-[16px_32px] mq825:min-w-full">
                     <div className="self-stretch flex flex-col items-start justify-start gap-[16px]">
                         <h1 className="m-0 self-stretch relative text-inherit leading-[76px] font-semibold font-inherit mq825:text-32xl mq825:leading-[61px] mq450:text-19xl mq450:leading-[46px]">
-                            
-                            <div className="relative inline-block">
+
+                            <Button type='text' onClick={() => {
+                                showDrawer();
+                            }} className="relative inline-block h-auto">
                                 <span
                                     className="text-transparent bg-clip-text bg-gradient-to-br from-purple-900 via-pink-700 to-yellow-400 uppercase animate-slide text-9xl"
-                                >{`ABOUT ME ` }</span>
-                            </div>
+                                >{`ABOUT ME `}</span>
+                            </Button>
                             <br></br>
 
                             <span className='text-yellow-500'
@@ -60,7 +70,7 @@ export default function Content({ a, b, c }) {
                             {a}
                             <br />
                             {b}
-                            
+
                             {/* Where to grow your business as a photographer: site or social
                 media? */}
                         </div>
@@ -73,7 +83,9 @@ export default function Content({ a, b, c }) {
                         className="bg-brand-primary w-25 h-16 relative  font-medium flex items-center justify-center min-w-[200px]">
                         View CV me
                     </Button>
-                    <a1>{time}</a1>
+
+
+
                     {/* </div> */}
                 </div>
                 <div className='w-max h-max bg-neutral-600'>

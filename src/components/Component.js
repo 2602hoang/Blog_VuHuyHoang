@@ -8,7 +8,7 @@ const Component = ({ image ,name,conten,imgs}) => (
   <div className="bg-gradient-to-br from-purple-800 via-pink-700 to-yellow-400 h-auto pt-9 self-stretch w-[368px] shrink-0 flex flex-col items-center justify-start max-w-full text-center text-xl text-neutral-grey font-body-regular-body-3">
     
     {/* <Card style={{width:400}}>  */}
-    <div className="h-auto w-[317px] max-h-full rounded-lg bg-neutral-silver shadow-[0px_8px_16px_rgba(171,_190,_209,_0.4)] flex flex-col items-center justify-start p-4 box-border gap-[16px] z-[1] mt-[-96px]">
+    <div className="h-auto w-[317px] max-h-full rounded-lg bg-white shadow-[0px_8px_16px_rgba(171,_190,_209,_0.4)] flex flex-col items-center justify-start p-4 box-border gap-[16px] z-[1] mt-[-96px]">
     <Image
     width={180}
       className="pt-12 self-stretch h-[150px] relative rounded-lg max-w-full overflow-hidden shrink-0 object-cover"
