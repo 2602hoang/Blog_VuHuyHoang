@@ -169,7 +169,7 @@ export default function Home() {
                             Java/ C#/ C++/
                         </div>
                     </div>
-                    <div className=" w-full h-[450px]  overflow-x-auto shrink-0 flex flex-row items-center justify-between py-0 px-36 box-border gap-[20px] max-w-full text-xl text-neutral-grey mq825:pl-9 mq825:pr-9 mq825:box-border mq1400:pl-[72px] mq1400:pr-[72px] mq1400:box-border">
+                    <div className=" w-4/5 h-[450px]  overflow-x-auto shrink-0 flex flex-row items-center justify-between py-0 px-36 box-border gap-[20px] max-w-full text-xl text-neutral-grey mq825:pl-9 mq825:pr-9 mq825:box-border mq1400:pl-[72px] mq1400:pr-[72px] mq1400:box-border">
                         <Component
                             // image18="/image-18@2x.png"
                             image={dev}
