@@ -9,8 +9,9 @@ const Content = ({ a, c }) => (
             <div className="flex-1 flex flex-col items-start justify-start gap-[32px] min-w-[427px] max-w-full mq825:gap-[16px_32px] mq825:min-w-full">
                 <div className="self-stretch flex flex-col items-start justify-start gap-[16px]">
                     <h1 className="m-0 self-stretch relative text-inherit leading-[76px] font-semibold font-inherit mq825:text-32xl mq825:leading-[61px] mq450:text-19xl mq450:leading-[46px]">
-                        <span>{`Lessons and insights `}</span>
-                        <span className="text-brand-primary">from 8 years</span>
+                        <span>{`ABOUT ME`}</span>
+                        <br></br>
+                        <span className="text-brand-primary"> VŨ HUY HOÀNG</span>
                     </h1>
                     <div className="self-stretch relative text-base leading-[24px] text-neutral-grey">
                         {a}
@@ -27,8 +28,8 @@ const Content = ({ a, c }) => (
 
 
             <Image
-                width={400}
-                className="h-[250px] w-[391px] relative max-w-full lg:flex-1"
+                width={350}
+                className="h-[250px] w-[391px] relative max-w-full lg:flex-1 rounded-3xl border-orange-50 border-y-indigo-500 border-solid outline-offset-2 "
                 loading="lazy"
                 alt=""
                 src={c}
@@ -36,10 +37,10 @@ const Content = ({ a, c }) => (
 
 
             <div className="!m-[0] absolute bottom-[16px] left-[calc(50%_-_23px)] flex flex-row items-start justify-start gap-[8px] z-[1]">
-
+{/* 
                 <div className="h-2.5 w-2.5 relative rounded-[50%] bg-brand-primary" />
                 <div className="h-2.5 w-2.5 relative rounded-[50%] bg-forestgreen" />
-                <div className="h-2.5 w-2.5 relative rounded-[50%] bg-forestgreen" />
+                <div className="h-2.5 w-2.5 relative rounded-[50%] bg-forestgreen" /> */}
 
 
 

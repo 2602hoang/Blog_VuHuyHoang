@@ -58,7 +58,8 @@ export default function Header() {
             <div className="w-[196px] flex flex-col items-start justify-start pt-2 px-0 pb-0 box-border">
                 <div className="w-[154.5px] h-6 flex flex-row items-end justify-start gap-[8px]">
                     <img
-                        className="h-[22.3px] w-[80px] relative min-h-[50px] mt-6 "
+                        className="h-[40px] w-[80px] relative min-h-[50px] mt-6 rounded-lg "
+                        // className="self-stretch h-[150px] relative rounded-lg max-w-full overflow-hidden shrink-0 object-cover"
                         loading="lazy"
                         alt="LOGO"
                         src={user}

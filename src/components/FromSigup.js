@@ -11,8 +11,9 @@ import {
   Row,
   Select,
   Upload,
+  message,
 } from 'antd';
-import { PlusOutlined } from '@ant-design/icons';
+import { PlusOutlined, UploadOutlined } from '@ant-design/icons';
 const { Option } = Select;
 const residences = [
     {
@@ -78,7 +79,18 @@ const residences = [
       },
     },
   };
-
+  const props = {
+    beforeUpload: (file) => {
+      const isPNG = file.type === 'image/png';
+      if (!isPNG) {
+        message.error(`${file.name} is not a png file`);
+      }
+      return isPNG || Upload.LIST_IGNORE;
+    },
+    onChange: (info) => {
+      console.log(info.fileList);
+    },
+  };
 
 const FromSigup = () => {
     const [form] = Form.useForm();
@@ -252,24 +264,9 @@ const FromSigup = () => {
           <Input.TextArea showCount maxLength={100} />
         </Form.Item>
         <Form.Item label="Avatar" valuePropName="fileList" getValueFromEvent={normFile}>
-          <Upload action="/upload.do" listType="picture-card">
-            <button
-              style={{
-                border: 0,
-                background: 'none',
-              }}
-              type="button"
-            >
-              <PlusOutlined />
-              <div
-                style={{
-                  marginTop: 8,
-                }}
-              >
-                Upload
-              </div>
-            </button>
-          </Upload>
+        <Upload {...props}>
+    <Button icon={<UploadOutlined />}>Click to Upload</Button>
+  </Upload>
         </Form.Item>
   
        
