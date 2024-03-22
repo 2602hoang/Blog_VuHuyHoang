@@ -140,7 +140,7 @@ export default function Content({ a, b, c }) {
                     <div className="self-stretch flex flex-col items-start justify-start gap-[16px]">
                         <h1 className="m-0 self-stretch relative text-inherit leading-[76px] font-semibold font-inherit mq825:text-32xl mq825:leading-[61px] mq450:text-19xl mq450:leading-[46px]">
 
-                            <Button type='text' onClick={() => {
+                            <Button type='link' onClick={() => {
                                 showDrawer();
                             }} className=" transition duration-300 relative inline-block h-auto">
                                 <span
@@ -175,8 +175,9 @@ export default function Content({ a, b, c }) {
 
                     {/* </div> */}
                 </div>
-                <div className='w-max h-max bg-neutral-600'>
+                <div  className='w-max h-max bg-neutral-600'>
                     <Modal
+                    
                         title="Personal CV, thank you for looking ✌️"
                         className='text-center w-max h-max '
 
@@ -205,8 +206,8 @@ export default function Content({ a, b, c }) {
                 </div>
 
                 <Image
-                    // width={200}
-                    className="bg-center blur-sm h-[550px] w-[391px] relative max-w-full lg:flex-1 rounded-3xl border-orange-50 border-y-indigo-500 border-solid outline-offset-2 "
+                    width={300}
+                    className="bg-center blur-sm h-[500px] w-[391px] relative max-w-full lg:flex-1 rounded-3xl border-orange-50 border-y-indigo-500 border-solid outline-offset-2 "
                     loading="lazy"
                     alt=""
                     src={c}
