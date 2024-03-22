@@ -92,13 +92,13 @@ export default function Home() {
 
 
             {/* 0 */}
-            <section id="part-1" className="self-stretch flex flex-row items-start justify-center pt-0 px-5 pb-10 box-border max-w-full text-center text-17xl text-neutral-d-grey font-body-regular-body-3">
+            <section className="self-stretch flex flex-row items-start justify-center pt-60 px-5 pb-10 box-border max-w-full text-center text-17xl text-neutral-d-grey font-body-regular-body-3">
                 <div className="w-[1152px] flex flex-col items-start justify-start gap-[16px] max-w-full">
-                    <div className="self-stretch flex flex-row items-start justify-start py-0 px-[21px] box-border max-w-full">
-                        <div className="flex-1 flex flex-col items-start justify-start gap-[8px] max-w-full">
-                            <h1 className="m-0 self-stretch relative text-inherit leading-[44px] font-semibold font-inherit mq825:text-10xl mq825:leading-[35px] mq450:text-3xl mq450:leading-[26px]">
+                    <div id="part-1" className="self-stretch flex flex-row items-start justify-start py-0 px-[21px] box-border max-w-full">
+                        <div className="flex-1 flex flex-col items-start justify-start gap-[8px] ">
+                            <div className="text-xxl w-auto px-1/2  bg-purple-200 text-purple-800 rounded-full m-0 self-stretch relative text-inherit leading-[44px] font-semibold font-inherit mq825:text-10xl mq825:leading-[35px] mq450:text-3xl mq450:leading-[26px]">
                             OUTSTANDING PROJECT
-                            </h1>
+                            </div>
                             <div className="self-stretch relative text-base leading-[24px] text-neutral-grey">
                             Project scale during the learning process at school and personal work!
                             </div>
@@ -151,23 +151,42 @@ export default function Home() {
             </section>
             {/* 1 */}
 
-            <Project/>
+            <Project  />
             {/* 2 */}
 
             {/* 3 */}
-            <section className=" flex flex-row items-center justify-center pt-0 pb-[94.59999999999992px] pr-0 pl-px box-border max-w-full text-center text-17xl text-neutral-d-grey font-body-regular-body-3 mq825:pb-[61px] mq825:box-border">
+            <section className=" flex flex-row items-center justify-center pt-90 pb-[94.59999999999992px] pr-0 pl-px box-border max-w-full text-center text-17xl text-neutral-d-grey font-body-regular-body-3 mq825:pb-[61px] mq825:box-border">
                 <div className="flex flex-col items-center justify-start gap-[16px] max-w-full">
                     <div id="part-2" className="w-[1150px] flex flex-col items-center justify-start py-0 px-5 box-border gap-[8px] max-w-full">
                         <h1 className="m-0 self-stretch relative text-inherit leading-[44px] font-semibold font-inherit mq825:text-10xl mq825:leading-[35px] mq450:text-3xl mq450:leading-[26px]">
                             SKILLS ABOUT ME
                         </h1>
-                        <div className="w-[628px] relative text-base leading-[24px] font-semibold  text-orange-500 inline-block max-w-full">
+                        {/* <div className="w-[628px] relative text-base leading-[24px] font-semibold  text-orange-500 inline-block max-w-full">
                             Programming Skills:
                             <br />
                             ⭐ JavaScript/ HTML/ CSS/ ReactJS/ React Native/ Antd/ Tailwindcss/ SQL/  ⭐
                             <br />
                             Java/ C#/ C++/
-                        </div>
+                        </div> */}
+             <div class="flex flex-col space-y-2">
+    <div class="font-bold">Programming Skills</div>
+    <div class="flex space-x-2">
+    <div class="text-sm px-3 bg-pink-200 text-pink-800 rounded-full"> ⭐</div>
+        <div class="text-sm px-3 bg-indigo-200 text-indigo-800 rounded-full" >JavaScript</div>
+        <div class="text-sm px-3 bg-red-200 text-red-800 rounded-full">HTML</div>
+        <div class="text-sm px-3 bg-orange-200 text-orange-800 rounded-full">CSS</div>
+        <div class="text-sm px-3 bg-yellow-200 text-yellow-800 rounded-full">ReactJS</div>
+        <div class="text-sm px-3 bg-green-200 text-green-800 rounded-full">React Native</div>
+        <div class="text-sm px-3 bg-teal-200 text-teal-800 rounded-full">Antd</div>
+        <div class="text-sm px-3 bg-blue-200 text-blue-800 rounded-full">Tailwindcss</div> 
+        <div class="text-sm px-3 bg-pink-200 text-pink-800 rounded-full"> ⭐</div>
+        {/* <div class="text-sm px-3 bg-purple-200 text-purple-800 rounded-full"></div> */}
+        
+       
+    </div>
+    <div class="text-sm px-3 bg-gray-200 text-gray-800 rounded-full">Java/C#/C++</div>
+       
+</div>
                     </div>
                     <div className=" w-4/5 h-[450px]  overflow-x-auto shrink-0 flex flex-row items-center justify-between py-0 px-36 box-border gap-[20px] max-w-full text-xl text-neutral-grey mq825:pl-9 mq825:pr-9 mq825:box-border mq1400:pl-[72px] mq1400:pr-[72px] mq1400:box-border">
                         <Component

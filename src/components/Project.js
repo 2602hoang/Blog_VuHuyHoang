@@ -7,7 +7,7 @@ import hotpot from '../asset/hotpot.png'
 import chat from '../asset/chat.png'
 import { Button, Card, Carousel, Drawer, Image, List } from 'antd';
 
-import { GithubOutlined, InfoCircleFilled } from '@ant-design/icons';
+import { GithubOutlined, InfoCircleFilled, LaptopOutlined, MobileOutlined, PlusOutlined } from '@ant-design/icons';
 
 export default function Project() {
     const [open, setOpen] = useState(false);
@@ -48,7 +48,7 @@ export default function Project() {
     }
 
     return (
-        <section className=" self-stretch flex flex-row items-start justify-start pt-0 px-0 pb-[42px] box-border max-w-full text-center text-9xl text-neutral-d-grey font-body-regular-body-3">
+        <section  className=" self-stretch flex flex-row items-start justify-start pt-0 px-0 pb-[42px] box-border max-w-full text-center text-9xl text-neutral-d-grey font-body-regular-body-3">
             <div className="flex-1 h-90  flex flex-row items-start justify-between py-0 px-36 box-border max-w-full gap-[20px] mq825:pl-[72px] mq825:pr-[72px] mq825:box-border mq1400:flex-wrap mq450:pl-5 mq450:pr-5 mq450:box-border">
                 {/* <div className=" flex flex-col items-start justify-start pt-2.5 px-0 pb-0 box-border"> */}
 
@@ -73,9 +73,10 @@ export default function Project() {
                             FOOD ORDERING APPLICATION FOR DISTRACTED RESTAURANTS
                         </h2>
                         <div className="self-stretch flex flex-row items-start justify-start py-0 px-2 text-sm text-neutral-grey">
-                            <div className="flex-1 relative leading-[20px]">
-                                Our membership management software provides full automation of
-                                membership renewals and payments
+                            <div className="inset-x-0 bottom-0 flex-1 relative leading-[20px]">
+                            <MobileOutlined style={{fontSize:'50px'}} />
+                            <PlusOutlined style={{fontSize:'25px'}}/>
+                            <LaptopOutlined style={{fontSize:'50px'}} />
                             </div>
 
                         </div>
@@ -94,9 +95,10 @@ export default function Project() {
                             ZOLA CHAT APP
                         </h2>
                         <div className="self-stretch flex flex-row items-start justify-start py-0 pr-[13px] pl-[13.5px] text-sm text-neutral-grey">
-                            <div className="flex-1 relative leading-[20px]">
-                                Our membership management software provides full automation of
-                                membership renewals and payments
+                            <div className="mt-20 flex-1 relative leading-[20px]">
+                            <MobileOutlined style={{fontSize:'50px'}} />
+                            <PlusOutlined style={{fontSize:'25px'}}/>
+                            <LaptopOutlined style={{fontSize:'50px'}} />
                             </div>
                         </div>
 
@@ -119,9 +121,8 @@ export default function Project() {
                                 PERSONAL BLOG
                             </h2>
                         </div>
-                        <div className="self-stretch relative text-sm leading-[20px] text-neutral-grey">
-                            Our membership management software provides full automation of
-                            membership renewals and payments
+                        <div className="self-stretch relative mt-20 text-sm leading-[20px] text-neutral-grey">
+                        <LaptopOutlined style={{fontSize:'50px'}} twoToneColor="#33FF33" />
                         </div>
                     </div>
                     {/* </div> */}

@@ -4,6 +4,7 @@ import baone from "../asset/baone.png"
 import cv from "../asset/CV.png"
 import Footter from './Footter';
 import { ArrowRightOutlined, FacebookFilled, GithubOutlined, GoogleOutlined, TwitterOutlined } from '@ant-design/icons';
+import Contac from './Contac';
 
 
 
@@ -49,14 +50,18 @@ export default function Content({ a, b, c }) {
             // }
             >
                 {/* <div className='bg-gradient-to-br from-red-500 to-yellow-500'> */}
-                <h1 className='px-3.5 justify-center text-green-500 items-center  text-3xl text-center ' >VU HUY HOANG</h1>
+                <div
+                
+                class='text-transparent text-center text-[90px] bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500 font-extrabold uppercase animate-slide '
+                >VU HUY HOANG</div>
                 <br />
                 <br />
+
                 <br />
-                <p className=' text-center px-51'>I'm a frontend developer who loves to make things look beautiful and working perfectly.
+                <p className=' text-center px-51 text-[17.5px] w-auto px-3 bg-yellow-200 text-yellow-800 rounded-full'>I'm a frontend developer who loves to make things look beautiful and working perfectly.
                     I'm passionate about making websites that are easy to use and that provide the best user experience possible.
                     I also happen to be a creative person, which I use to inject a little bit of fun into every project.</p>
-                    <List
+                <List
                     itemLayout="vertical"
                     size="large"
                     className='h-96'
@@ -68,42 +73,36 @@ export default function Content({ a, b, c }) {
                     }}
                     header={
                         <div>
-                           <h1 className='text-center'>Personal image</h1>
+                            <h1 className='px-3.5 justify-center text-green-500 items-center  text-3xl text-center '>Personal image</h1>
                             {/* <h2 className='bg-gradient-to-br from-purple-800 via-pink-700 to-yellow-400'>Image of Website and Mobie App</h2> */}
                         </div>
                     }
                     dataSource={imgs}
                     renderItem={(image, index) => (
                         <div className='justify-center items-center pl-40'>
-                        <Image key={index} className=" justify-center items-center" width={450} height={650}  src={image}
-                        
-                        />
+                            <Image key={index} className=" justify-center items-center " width={450} height={650} src={image}
+
+                            />
                         </div>
                     )}
                 />
 
 
 
-                <div className="w-[350px] pt-96  flex flex-col items-start justify-start gap-[40px] min-w-[350px] max-w-full text-left text-sm text-black font-body-regular-body-3 mq825:min-w-full mq1400:flex-1 mq450:gap-[20px_40px]">
+                <div className="w-4/5 pt-96  flex flex-col items-center justify-center gap-[40px]  text-left text-sm text-black font-body-regular-body-3 mq825:min-w-full mq1400:flex-1 mq450:gap-[20px_40px]">
+
+                    <div className="  flex flex-col items-center justify-center pl-5 ">
+                        <br />
+                        <h1 className="text-sm px-3 bg-purple-200 text-purple-800 rounded-full mb-3 ml-16">
+                            CONTACT
+                        </h1>
+                        <Contac />
 
 
-                    <div className="  flex flex-col items-start justify-start ">
-                        <h2 className="">
-                            Contact:
-                        </h2>
-                        <h2 className="">
-
-
-                            Email: vuhuyhoangboj@gmail.com
-                            <br />
-                            Tel/Zalo: +84 917 789 964
-
-
-                        </h2>
                     </div>
                     <h2>My social network here 👇</h2>
 
-                    <div className=" h-8 overflow-hidden shrink-0 flex flex-row items-start justify-start gap-[16px]">
+                    <div className=" h-8 overflow-hidden shrink-0 w-max flex flex-row items-start justify-start gap-[16px]">
                         <Button type='link' href='https://www.facebook.com/VHH26022001/'>
                             <FacebookFilled
                                 className="h-8 w-8 relative min-h-[32px]"
@@ -126,14 +125,12 @@ export default function Content({ a, b, c }) {
 
                             />
                         </Button>
-                        <Button type='link'>
-                            {/* <TwitterOutlined
-                            className="h-8 w-8 relative min-h-[32px]"
-                            alt=""
-
-                        /> */}
-                        </Button>
+                    
+                        <a className="w-30 text-sm mt-3 bg-purple-200 text-purple-800 rounded-full  ">
+                        Tel/Zalo:0917789964
+                    </a>
                     </div>
+                    
                 </div>
             </Drawer>
 
@@ -145,9 +142,9 @@ export default function Content({ a, b, c }) {
 
                             <Button type='text' onClick={() => {
                                 showDrawer();
-                            }} className="relative inline-block h-auto">
+                            }} className=" transition duration-300 relative inline-block h-auto">
                                 <span
-                                    className="text-transparent bg-clip-text bg-gradient-to-br from-purple-900 via-pink-700 to-yellow-400 uppercase animate-slide text-9xl"
+                                    className=" text-transparent bg-clip-text bg-gradient-to-br from-purple-900 via-pink-700 to-yellow-400 uppercase animate-slide text-9xl"
                                 >{`ABOUT ME `}</span>
                             </Button>
                             <br></br>
@@ -170,7 +167,7 @@ export default function Content({ a, b, c }) {
                         onClick={() => {
                             showModal();
                         }}
-                        className="bg-brand-primary w-25 h-16 relative  font-medium flex items-center justify-center min-w-[200px]">
+                        className=" transition duration-300 bg-brand-primary w-25 h-16 relative  font-medium flex items-center justify-center min-w-[200px]">
                         View CV me
                     </Button>
 
@@ -208,8 +205,8 @@ export default function Content({ a, b, c }) {
                 </div>
 
                 <Image
-                    width={200}
-                    className="h-[250px] w-[391px] relative max-w-full lg:flex-1 rounded-3xl border-orange-50 border-y-indigo-500 border-solid outline-offset-2 "
+                    // width={200}
+                    className="bg-center blur-sm h-[550px] w-[391px] relative max-w-full lg:flex-1 rounded-3xl border-orange-50 border-y-indigo-500 border-solid outline-offset-2 "
                     loading="lazy"
                     alt=""
                     src={c}
