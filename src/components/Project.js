@@ -198,7 +198,7 @@ export default function Project() {
                         />
                     )}
                 />
-                <h1 className='text-center text-3xl text-amber-500 text-'>Detail<br /></h1>
+                <h1 className='mt-20 text-center text-3xl text-amber-500 text-'>Detail<br /></h1>
                 <span >
                     <h4 className='justify-start text-black font-medium'>
                     Project scale: project in schools.<br/>
