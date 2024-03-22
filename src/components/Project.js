@@ -2,7 +2,9 @@ import React, { useState } from 'react';
 import gin from '../asset/gin.png';
 import data from "../asset/data"
 import user from '../asset/userTest.png';
-import logo from '../asset/reactjs.png';
+import logo from '../asset/AAA.png';
+import hotpot from '../asset/hotpot.png'
+import chat from '../asset/chat.png'
 import { Button, Card, Carousel, Drawer, Image, List } from 'antd';
 
 import { GithubOutlined, InfoCircleFilled } from '@ant-design/icons';
@@ -36,6 +38,10 @@ export default function Project() {
     for (let i = 1; i <= 17; i++) {
         images.push(require(`../asset/Picture${i}.png`));
     }
+    const imgs = [];
+    for (let i = 1; i <= 8; i++) {
+        imgs.push(require(`../asset/${i}.png`));
+    }
 
     return (
         <section className=" self-stretch flex flex-row items-start justify-start pt-0 px-0 pb-[42px] box-border max-w-full text-center text-9xl text-neutral-d-grey font-body-regular-body-3">
@@ -48,18 +54,18 @@ export default function Project() {
 
                         <div className="w-[65px] flex flex-row items-start justify-start">
                             <div className="h-14 flex-1 relative">
-                                <div className="absolute top-[56px] left-[65px] rounded-tl-lg rounded-tr-8xs rounded-br-3xs rounded-bl-8xs bg-honeydew w-[50px] h-[49px] [transform:_rotate(-180deg)] [transform-origin:0_0]" />
+                                <div className="absolute  rounded-tl-lg rounded-tr-8xs rounded-br-3xs rounded-bl-8xs w-[50px] h-[49px] [transform:_rotate(-180deg)] [transform-origin:0_0]" />
                                 <img
-                                    className="absolute top-[0px] left-[0px] w-12 h-12 z-[1]"
+                                    className="absolute bg-white top-[0px] left-[0px] w-15 h-15 z-[1]"
                                     alt=""
-                                    src={gin}
+                                    src={hotpot}
                                 />
                             </div>
                         </div>
                     </div>
 
                     <div className="self-stretch flex flex-col items-start justify-start gap-[8px]">
-                        <h2 className="m-0 self-stretch relative text-inherit leading-[36px] font-bold font-inherit mq450:text-3xl mq450:leading-[29px]">
+                        <h2 className=" m-0 self-stretch relative text-inherit leading-[36px] font-bold font-inherit mq450:text-3xl mq450:leading-[29px]">
                             FOOD ORDERING APPLICATION FOR DISTRACTED RESTAURANTS
                         </h2>
                         <div className="self-stretch flex flex-row items-start justify-start py-0 px-2 text-sm text-neutral-grey">
@@ -77,10 +83,10 @@ export default function Project() {
                 <div className=" w-[299px] self-stretch rounded-lg h-90  bg-orange-300 shadow-[0px_2px_4px_rgba(171,_190,_209,_0.2)] flex flex-col items-start justify-start py-6 px-4 gap-[16px]">
                     <Button type='link' icon={<InfoCircleFilled />} onClick={showDrawer1} title='Project information '>Project information</Button>
                     <div className="self-stretch h-14 flex flex-row items-start justify-center py-0 px-5 box-border">
-                        <img className="h-14 w-[65px] relative" alt="" src={logo} />
+                        <img className="h-14 w-[65px] relative" alt="" src={chat} />
                     </div>
                     <div className="self-stretch flex flex-col items-start justify-start gap-[8px]">
-                        <h2 className="m-0 self-stretch relative text-inherit leading-[36px] font-bold font-inherit mq450:text-3xl mq450:leading-[29px]">
+                        <h2 className=" m-0 self-stretch relative text-inherit leading-[36px] font-bold font-inherit mq450:text-3xl mq450:leading-[29px]">
                             ZOLA CHAT APP
                         </h2>
                         <div className="self-stretch flex flex-row items-start justify-start py-0 pr-[13px] pl-[13.5px] text-sm text-neutral-grey">
@@ -100,7 +106,7 @@ export default function Project() {
                         <img
                             className="h-14 w-[65px] relative"
                             alt=""
-                            src={user}
+                            src={logo}
                         />
                     </div>
                     <div className="self-stretch flex flex-col items-start justify-start gap-[8px]">
@@ -132,7 +138,7 @@ export default function Project() {
                     }}
                     header={
                         <div>
-                            <h2>Image of Website and Mobie App</h2>
+                            <h2 className='bg-gradient-to-br from-purple-800 via-pink-700 to-yellow-400'>Image of Website and Mobie App</h2>
                         </div>
                     }
                     dataSource={images}
@@ -140,35 +146,70 @@ export default function Project() {
                         <Image key={index} className="px-2" width={200} src={image} />
                     )}
                 />
-                <h1 className='text-center text-3xl text-amber-500 text-'>Detail<br/></h1>
-                <span>
-                 
-                    Project scale: graduation thesis course<br/>
-                    Team size: 2 people<br/>
-                    My location:(front-end,test-case creation, documentation)<br/>
-                    - Develop a website interface for kitchen staff with ReactJS, a mobie interface for waiters with ReactNative, develop documents, and complete the database with the rest of you.<br/>
-                    Project Information:<br/>
-                    - Staff information, ordering food, closing orders, handling operations to return water when not used up, returning dishes, providing details of dishes to customers, on the mobie application of the waitress.<br/>
-                    - Receive orders, process orders on the website application, CRUD dishes, staff, statistics desk at the website application of the manager.<br/>
-                    – The user interface is implemented using ReactJS and ReactNative.<br/>
-                    - The backend uses GoLang and MySQL and is deployed on VPS.<br/>
-                    Technologies used: HTML / CSS, JavaScript, ReactJS, React Native, GoLang.<br/><br/>
-                </span>
-                <h1>Source code at GitHub:</h1>
-                <span>Mobie 👉:{'\t'}</span>
+                <h1 className='text-center text-3xl text-amber-500 text-'>Detail<br /></h1>
+                <span >
+                        <h4 className='font-medium text-black'>
+                    Project scale: graduation thesis course<br />
+                    Team size: 2 people<br />
+                    My location:(front-end,test-case creation, documentation)<br />
+                    - Develop a website interface for kitchen staff with ReactJS, a mobie interface for waiters with ReactNative, develop documents, and complete the database with the rest of you.<br />
+                    Project Information:<br />
+                    - Staff information, ordering food, closing orders, handling operations to return water when not used up, returning dishes, providing details of dishes to customers, on the mobie application of the waitress.<br />
+                    - Receive orders, process orders on the website application, CRUD dishes, staff, statistics desk at the website application of the manager.<br />
+                    – The user interface is implemented using ReactJS and ReactNative.<br />
+                    - The backend uses GoLang and MySQL and is deployed on VPS.<br />
+                    Technologies used: HTML / CSS, JavaScript, ReactJS, React Native, GoLang.<br /><br />
+                    </h4> </span>
+                <h1 className='justify-start text-black font-medium'>Source code at GitHub:</h1>
+                <span className='justify-start text-black font-medium'>Mobie 👉:{'\t'}</span>
                 <Button type='link' icon={<GithubOutlined />} href='https://github.com/2602hoang/mobie_app-ReactNative' />
                 <br />
-                <span>Website 👉:{'\t'}</span>
+                <span className='justify-start text-black font-medium'>Website 👉:{'\t'}</span>
                 <Button type='link' icon={<GithubOutlined />} href='https://github.com/2602hoang/WEBAPP-ReactJS-Antd' />
 
             </Drawer>
-            <Drawer title="ZOLA CHAT APP" width={900} open={open1} onClose={onClose1}
+            <Drawer title="ZOLA CHAT APP" width={900} height={700} open={open1} onClose={onClose1}
                 placement="bottom"
 
             >
-                <p>Some contents...</p>
-                <p>Some contents...</p>
-                <p>Some contents...</p>
+                <List
+                    itemLayout="vertical"
+                    size="large"
+                    pagination={{
+                        onChange: (page) => {
+                            console.log(page);
+                        },
+                        pageSize: 4,
+                    }}
+                    header={
+                        <div>
+                            <h2 className='bg-gradient-to-br from-purple-800 via-pink-700 to-yellow-400'>Image of Website and Mobie App</h2>
+                        </div>
+                    }
+                    dataSource={imgs}
+                    renderItem={(image, index) => (
+                        <Image key={index} className="px-2" width={200} src={image} />
+                    )}
+                />
+                <h1 className='text-center text-3xl text-amber-500 text-'>Detail<br /></h1>
+                <span >
+                    <h4 className='justify-start text-black font-medium'>
+                    Project scale: project in schools.<br/>
+                    Team Size: 5 people<br/>
+                    My location:(front-end,test-case creation, documentation)<br/>
+                    -ReactNative mobie interface development, newspaper documentation development.<br/>
+                    Project Information:<br/>
+                    - CRUD user information and chat, CU messages, making video calls.<br/>
+                    – The user interface is implemented using ReactJS and ReactNative with TailwindCSS and Charka UI, real-time connection using socket.io and web has been implemented for Netlify.<br/>
+                    -The backend uses NodeJS and MongoDB and is implemented for Heroku.<br/>    
+                    Technologies used: HTML / CSS, JavaScript, ReactJS, React Native, MongoDB.
+                    </h4>
+                </span>
+                <h1 className='justify-start text-black font-medium'>Source code at GitHub:</h1>
+                <span className='justify-start text-black font-medium'>Mobie &Website 👉:{'\t'}</span>
+                <Button type='link' icon={<GithubOutlined />} href='https://github.com/2602hoang/zola-gui' />
+                <br />
+                
             </Drawer>
             <Drawer title="PERSONAL BLOG" width={900} open={open2} onClose={onClose2}
                 placement="right"
