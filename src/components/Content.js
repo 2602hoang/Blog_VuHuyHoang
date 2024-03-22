@@ -1,7 +1,9 @@
-import { Anchor, Button, Drawer, Image, Modal } from 'antd';
+import { Anchor, Button, Drawer, Image, List, Modal } from 'antd';
 import React, { useEffect, useState } from 'react';
 import baone from "../asset/baone.png"
 import cv from "../asset/CV.png"
+import Footter from './Footter';
+import { ArrowRightOutlined, FacebookFilled, GithubOutlined, GoogleOutlined, TwitterOutlined } from '@ant-design/icons';
 
 
 
@@ -29,22 +31,110 @@ export default function Content({ a, b, c }) {
     const onClose = () => {
         setOpen1(false);
     };
+    const imgs = [];
+    for (let i = 1; i <= 4; i++) {
+        imgs.push(require(`../asset/me${i}.png`));
+    }
     return (
 
 
         <section
             id="part-5"
             className="bg-white  self-stretch flex flex-row items-start justify-start pt-0 px-0 pb-10 box-border w-full text-left text-45xl text-neutral-d-grey font-body-regular-body-3">
-            <Drawer title="About Me " width={900} onClose={onClose} open={open1}
-            placement="left"
+            <Drawer title="About Me  " width={900} onClose={onClose} open={open1}
+                placement="left"
             // closable={false}
             // extra={
             //     <Button onClick={onClose}>Cancel</Button>
             // }
             >
-                <p>Some contents...</p>
-                <p>Some contents...</p>
-                <p>Some contents...</p>
+                {/* <div className='bg-gradient-to-br from-red-500 to-yellow-500'> */}
+                <h1 className='px-3.5 justify-center text-green-500 items-center  text-3xl text-center ' >VU HUY HOANG</h1>
+                <br />
+                <br />
+                <br />
+                <p className=' text-center px-51'>I'm a frontend developer who loves to make things look beautiful and working perfectly.
+                    I'm passionate about making websites that are easy to use and that provide the best user experience possible.
+                    I also happen to be a creative person, which I use to inject a little bit of fun into every project.</p>
+                    <List
+                    itemLayout="vertical"
+                    size="large"
+                    className='h-96'
+                    pagination={{
+                        onChange: (page) => {
+                            console.log(page);
+                        },
+                        pageSize: 1,
+                    }}
+                    header={
+                        <div>
+                           <h1 className='text-center'>Personal image</h1>
+                            {/* <h2 className='bg-gradient-to-br from-purple-800 via-pink-700 to-yellow-400'>Image of Website and Mobie App</h2> */}
+                        </div>
+                    }
+                    dataSource={imgs}
+                    renderItem={(image, index) => (
+                        <div className='justify-center items-center pl-40'>
+                        <Image key={index} className=" justify-center items-center" width={450} height={650}  src={image}
+                        
+                        />
+                        </div>
+                    )}
+                />
+
+
+
+                <div className="w-[350px] pt-96  flex flex-col items-start justify-start gap-[40px] min-w-[350px] max-w-full text-left text-sm text-black font-body-regular-body-3 mq825:min-w-full mq1400:flex-1 mq450:gap-[20px_40px]">
+
+
+                    <div className="  flex flex-col items-start justify-start ">
+                        <h2 className="">
+                            Contact:
+                        </h2>
+                        <h2 className="">
+
+
+                            Email: vuhuyhoangboj@gmail.com
+                            <br />
+                            Tel/Zalo: +84 917 789 964
+
+
+                        </h2>
+                    </div>
+                    <h2>My social network here 👇</h2>
+
+                    <div className=" h-8 overflow-hidden shrink-0 flex flex-row items-start justify-start gap-[16px]">
+                        <Button type='link' href='https://www.facebook.com/VHH26022001/'>
+                            <FacebookFilled
+                                className="h-8 w-8 relative min-h-[32px]"
+                                loading="lazy"
+                                alt=""
+
+                            />
+                        </Button>
+                        <Button type='link' href='https://vuhuyhoangcv.wordpress.com/'>
+                            <GoogleOutlined
+                                className="h-8 w-8 relative min-h-[32px]"
+                                alt=""
+
+                            />
+                        </Button>
+                        <Button type='link' href='https://github.com/2602hoang'>
+                            <GithubOutlined
+                                className="h-8 w-8 relative min-h-[32px]"
+                                alt=""
+
+                            />
+                        </Button>
+                        <Button type='link'>
+                            {/* <TwitterOutlined
+                            className="h-8 w-8 relative min-h-[32px]"
+                            alt=""
+
+                        /> */}
+                        </Button>
+                    </div>
+                </div>
             </Drawer>
 
             <div className="flex-1 bg-white flex flex-row items-center justify-start py-24 px-36 box-border relative gap-[104px] max-w-full lg:flex-wrap mq825:gap-[104px_52px] mq825:py-[62px] mq825:px-[72px] mq825:box-border mq450:gap-[104px_26px] mq450:pl-5 mq450:pr-5 mq450:box-border">

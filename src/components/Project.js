@@ -42,6 +42,10 @@ export default function Project() {
     for (let i = 1; i <= 8; i++) {
         imgs.push(require(`../asset/${i}.png`));
     }
+    const img = [];
+    for (let i = 1; i <= 7; i++) {
+        img.push(require(`../asset/a${i}.png`));
+    }
 
     return (
         <section className=" self-stretch flex flex-row items-start justify-start pt-0 px-0 pb-[42px] box-border max-w-full text-center text-9xl text-neutral-d-grey font-body-regular-body-3">
@@ -175,6 +179,7 @@ export default function Project() {
                 <List
                     itemLayout="vertical"
                     size="large"
+                    className='h-96'
                     pagination={{
                         onChange: (page) => {
                             console.log(page);
@@ -188,7 +193,9 @@ export default function Project() {
                     }
                     dataSource={imgs}
                     renderItem={(image, index) => (
-                        <Image key={index} className="px-2" width={200} src={image} />
+                        <Image key={index} className="px-2 " width={200}  src={image}
+                        
+                        />
                     )}
                 />
                 <h1 className='text-center text-3xl text-amber-500 text-'>Detail<br /></h1>
@@ -215,9 +222,42 @@ export default function Project() {
                 placement="right"
 
             >
-                <p>Some contents...</p>
-                <p>Some contents...</p>
-                <p>Some contents...</p>
+                 <List
+                    itemLayout="vertical"
+                    size="large"
+                    pagination={{
+                        onChange: (page) => {
+                            console.log(page);
+                        },
+                        pageSize: 2,
+                    }}
+                    header={
+                        <div>
+                            <h2 className='bg-gradient-to-br from-purple-800 via-pink-700 to-yellow-400'>Image of Website App</h2>
+                        </div>
+                    }
+                    dataSource={img}
+                    renderItem={(image, index) => (
+                        <Image key={index} className="px-2" width={600} height={400} src={image} />
+                    )}
+                />
+                 <h1 className='text-center text-3xl text-amber-500 text-'>Detail<br /></h1>
+                <span >
+                    <h4 className='justify-start text-black font-medium'>
+                    Project scale: Individual.<br/>
+                    Team Size: 1 people<br/>
+                    My location:(front-end + deploy)<br/>
+                    -Develop a personal blog that introduces yourself.<br/>
+                    Project Information:<br/>
+                    -Website development designed according to the basic website interface of the homepage.<br/>
+                    -Develop a personal blog website including CV and programming skills advantages.
+                    Technologies used: HTML / CSS, JavaScript, ReactJS,TaiwindCss ,AntDesign.
+                    </h4>
+                </span>
+                <h1 className='justify-start text-black font-medium'>Source code at GitHub:</h1>
+                <span className='justify-start text-black font-medium'>Website 👉:{'\t'}</span>
+                <Button type='link' icon={<GithubOutlined />} href='https://github.com/2602hoang/web_home_demo_JS-taiwin' />
+                <br />
             </Drawer>
 
 
