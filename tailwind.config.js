@@ -44,6 +44,7 @@ module.exports = {
       inherit: "inherit",
     },
     screens: {
+      'iphone-6-1': {'raw': '(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2)'},
       mq1400: {
         raw: "screen and (max-width: 1400px)",
       },
