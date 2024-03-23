@@ -49,7 +49,7 @@ module.exports = {
         raw: "screen and (max-width: 1400px)",
       },
       iphone61: {
-        raw: '(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2)'
+        raw: '(device-width: 1170px) and (device-height: 2532px) and (-webkit-device-pixel-ratio: 2)'
       },
       lg: {
         max: "1200px",
