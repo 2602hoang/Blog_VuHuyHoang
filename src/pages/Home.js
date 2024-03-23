@@ -21,7 +21,7 @@ import logo from '../asset/reactjs.png';
 import Component from '../components/Component';
 import antd from '../asset/antdesign.png';
 import ContactusLegal from '../components/ContactusLagal';
-import { GithubOutlined, MoneyCollectOutlined, StarOutlined, UserOutlined } from '@ant-design/icons';
+import { FieldTimeOutlined, GithubOutlined, MoneyCollectOutlined, StarOutlined, UserOutlined } from '@ant-design/icons';
 // import { useGesture } from '@use-gesture/react';
 import { useGesture } from 'react-use-gesture'
 import Content from '../components/Content';
@@ -37,6 +37,7 @@ import Project from '../components/Project';
 
 
 export default function Home() {
+
     const onPanelChange = (value, mode) => {
         console.log(value.format('YYYY-MM-DD'), mode);
     };
@@ -52,7 +53,7 @@ export default function Home() {
             const day = now.getDate().toString().padStart(2, '0');
             const month = (now.getMonth() + 1).toString().padStart(2, '0'); // Adding 1 because getMonth() returns zero-based month index
             const year = now.getFullYear().toString();
-            const timeString = `\t Whatch :${hours}:${minutes}:${seconds}` + `\n` + `` + `\n\n\n\n\n\t\t` +
+            const timeString = `\t Whatch ${hours}:${minutes}:${seconds}` + `\n` + `` + `||\n\n\n\n\n\t\t` +
                 `${dayOfWeek},${day}/${month}/${year}`
                 ;
             setTime(timeString);
@@ -61,7 +62,7 @@ export default function Home() {
         return () => clearInterval(interval);
     }, []);
     // const [open, setOpen] = useState(false);
-    
+
 
 
     return (
@@ -79,6 +80,7 @@ export default function Home() {
             <div className='items-center justify-center px-20 '>
                 <Content
                     //    id="part-0"
+                    
                     a="I am a student waiting for my diploma, so I can work full-time at the company."
 
                     b="Software Engineering major, mainly Front-End programming, user interface design for Website and Mobie applications.
@@ -97,10 +99,10 @@ export default function Home() {
                     <div id="part-1" className="self-stretch flex flex-row items-start justify-start py-0 px-[21px] box-border max-w-full">
                         <div className="flex-1 flex flex-col items-start justify-start gap-[8px] ">
                             <div className="text-xxl w-auto px-1/2  bg-purple-200 text-purple-800 rounded-full m-0 self-stretch relative text-inherit leading-[44px] font-semibold font-inherit mq825:text-10xl mq825:leading-[35px] mq450:text-3xl mq450:leading-[26px]">
-                            OUTSTANDING PROJECT
+                                OUTSTANDING PROJECT
                             </div>
-                            <div className="self-stretch relative text-base leading-[24px] text-neutral-grey">
-                            Project scale during the learning process at school and personal work!
+                            <div className=" font-bold self-stretch relative text-base leading-[24px] text-neutral-grey">
+                                Project scale during the learning process at school and personal work!
                             </div>
                         </div>
                     </div>
@@ -151,7 +153,7 @@ export default function Home() {
             </section>
             {/* 1 */}
 
-            <Project  />
+            <Project />
             {/* 2 */}
 
             {/* 3 */}
@@ -168,31 +170,46 @@ export default function Home() {
                             <br />
                             Java/ C#/ C++/
                         </div> */}
-             <div class="flex flex-col space-y-2">
-    <div class="font-bold">Programming Skills</div>
-    <div class="flex space-x-2">
-    <div class="text-sm px-3 bg-pink-200 text-pink-800 rounded-full"> ⭐</div>
-        <div class="text-sm px-3 bg-indigo-200 text-indigo-800 rounded-full" >JavaScript</div>
-        <div class="text-sm px-3 bg-red-200 text-red-800 rounded-full">HTML</div>
-        <div class="text-sm px-3 bg-orange-200 text-orange-800 rounded-full">CSS</div>
-        <div class="text-sm px-3 bg-yellow-200 text-yellow-800 rounded-full">ReactJS</div>
-        <div class="text-sm px-3 bg-green-200 text-green-800 rounded-full">React Native</div>
-        <div class="text-sm px-3 bg-teal-200 text-teal-800 rounded-full">Antd</div>
-        <div class="text-sm px-3 bg-blue-200 text-blue-800 rounded-full">Tailwindcss</div> 
-        <div class="text-sm px-3 bg-pink-200 text-pink-800 rounded-full"> ⭐</div>
-        {/* <div class="text-sm px-3 bg-purple-200 text-purple-800 rounded-full"></div> */}
-        
-       
-    </div>
-    <div class="text-sm px-3 bg-gray-200 text-gray-800 rounded-full">Java/C#/C++</div>
-       
-</div>
+                        <div class="flex flex-col space-y-2">
+                            <div class="font-bold">Programming Skills</div>
+                            <div class=" animate-bounce flex space-x-8 text-center">
+                                <div class=" text-sm px-3 bg-pink-200 text-pink-800 rounded-full"> ⭐</div>
+                                <div class="text-sm px-3 bg-indigo-200 text-indigo-800 rounded-full" >JavaScript</div>
+                                <div class="text-sm px-3 bg-red-200 text-red-800 rounded-full">HTML</div>
+                                <div class="text-sm px-3 bg-orange-200 text-orange-800 rounded-full">CSS</div>
+                                <div class="text-sm px-3 bg-yellow-200 text-yellow-800 rounded-full">ReactJS</div>
+                                <div class="text-sm px-3 bg-green-200 text-green-800 rounded-full">React Native</div>
+                                <div class="text-sm px-3 bg-teal-200 text-teal-800 rounded-full">Antd</div>
+                                <div class="text-sm px-3 bg-blue-200 text-blue-800 rounded-full">Tailwindcss</div>
+                                
+                                {/* <div class="text-sm px-3 bg-purple-200 text-purple-800 rounded-full"></div> */}
+                                <div class=" space-x-2 space-y-2 text-center text-sm px-3 bg-purple-200 text-purple-800 rounded-full">Java/C#/C++</div>
+                                <div class="text-sm px-3 bg-pink-200 text-pink-800 rounded-full"> ⭐</div>
+                            </div>
+
+                            
+                            <div class="flex flex-col space-y-2">
+                            <div class="font-bold">Soft Skills</div>
+                            <div class=" animate-bounce flex space-x-6 text-center">
+                                <div class="text-sm px-3 bg-indigo-200 text-indigo-800 rounded-full" >Inquisitive, progressive</div>
+                                <div class="text-sm px-3 bg-red-200 text-red-800 rounded-full">Work under pressure</div>
+                                <div class="text-sm px-3 bg-orange-200 text-orange-800 rounded-full">Teamwork</div>
+                                <div class="text-sm px-3 bg-yellow-200 text-yellow-800 rounded-full">Ability to adapt quickly</div>
+                                <div class="text-sm px-3 bg-green-200 text-green-800 rounded-full">Quick acquisition</div>
+                                <div class="text-sm px-3 bg-teal-200 text-teal-800 rounded-full">Inquisitive, progressive</div>
+
+                            </div>
+
+                        </div>
+                        <div class="font-bold"> Foreign languager:</div>
+                        Reading and understanding English documents
+                        </div>
                     </div>
-                    <div className=" w-4/5 h-[450px]  overflow-x-auto shrink-0 flex flex-row items-center justify-between py-0 px-36 box-border gap-[20px] max-w-full text-xl text-neutral-grey mq825:pl-9 mq825:pr-9 mq825:box-border mq1400:pl-[72px] mq1400:pr-[72px] mq1400:box-border">
+                    <div className=" w-4/5 h-[450px]  overflow-x-auto shrink-0 flex flex-row items-center justify-between py-0 px-5 box-border gap-[20px] max-w-full text-xl text-neutral-grey mq825:pl-9 mq825:pr-9 mq825:box-border mq1400:pl-[72px] mq1400:pr-[72px] mq1400:box-border">
                         <Component
                             // image18="/image-18@2x.png"
                             image={dev}
-                            
+
                             name="JavaScript"
                             // conten="Creating Streamlined Safeguarding Processes with OneRen"
                             imgs={js}
@@ -254,7 +271,7 @@ export default function Home() {
                     <Calendar className=' w-auto h-auto  border-4 border-b-slate-900 rounded-md border-solid' onPanelChange={onPanelChange} />
 
                     <div className="boder-2 r rounded-lg border-red-700 w-1/2 overflow-hidden shrink-0 flex flex-col items-center justify-start gap-[40px] max-w-full text-9xl mq825:gap-[20px_40px]">
-                        <div className="self-stretch overflow-hidden flex flex-row items-center justify-start gap-[30px] mq825:flex-wrap">
+                        {/* <div className="self-stretch overflow-hidden flex flex-row items-center justify-start gap-[30px] mq825:flex-wrap">
                             <UserOutlined />
                             <ContactusLegal
                                 icon={<UserOutlined />}
@@ -283,8 +300,8 @@ export default function Home() {
                                 label="Payments"
                                 propOverflow="hidden"
                             />
-                        </div>
-                        <Button type='text' className="boder-4 r rounded-lg border-red-700">{time}</Button>
+                        </div> */}
+                        <Button type='text' icon={<FieldTimeOutlined />} className="boder-4 text-xxl rounded-lg border-red-700">{time}</Button>
                     </div>
                 </div>
             </section>

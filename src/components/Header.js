@@ -85,7 +85,10 @@ export default function Header() {
                     <Button
                         type='text'
                         // danger
-                        href='#part-0'
+                        // onClick={()=>{
+                        //     showDrawer();
+                        // }}
+                        href='/'
                         className="relative leading-[24px] font-medium inline-block min-w-[46px]">
                         About
                     </Button>

@@ -35,12 +35,20 @@ export default function Project() {
         console.log(currentSlide);
     };
     const images = [];
-    for (let i = 1; i <= 17; i++) {
+    for (let i = 1; i <= 12; i++) {
         images.push(require(`../asset/Picture${i}.png`));
     }
+    const images1 = [];
+    for (let i = 13; i <= 17; i++) {
+        images1.push(require(`../asset/Picture${i}.png`));
+    }
     const imgs = [];
-    for (let i = 1; i <= 8; i++) {
+    for (let i = 1; i <= 3; i++) {
         imgs.push(require(`../asset/${i}.png`));
+    }
+    const imgs1 = [];
+    for (let i = 3; i <= 8; i++) {
+        imgs1.push(require(`../asset/${i}.png`));
     }
     const img = [];
     for (let i = 1; i <= 7; i++) {
@@ -53,7 +61,7 @@ export default function Project() {
                 {/* <div className=" flex flex-col items-start justify-start pt-2.5 px-0 pb-0 box-border"> */}
 
                 <div className=" w-[299px] self-stretch rounded-lg h-90  bg-orange-300 shadow-[0px_2px_4px_rgba(171,_190,_209,_0.2)] flex flex-col items-start justify-start py-6 px-4 gap-[16px]">
-                    <Button type='link' icon={<InfoCircleFilled />} onClick={showDrawer} title='Project information '>Project information</Button>
+                    <Button type='link' className='animate-pulse' icon={<InfoCircleFilled />} onClick={showDrawer} title='Project information '>Project information</Button>
                     <div className="self-stretch flex flex-row items-start justify-center py-0 px-5">
 
                         <div className="w-[65px] flex flex-row items-start justify-start">
@@ -86,7 +94,7 @@ export default function Project() {
 
 
                 <div className=" w-[299px] self-stretch rounded-lg h-90  bg-orange-300 shadow-[0px_2px_4px_rgba(171,_190,_209,_0.2)] flex flex-col items-start justify-start py-6 px-4 gap-[16px]">
-                    <Button type='link' icon={<InfoCircleFilled />} onClick={showDrawer1} title='Project information '>Project information</Button>
+                    <Button type='link' icon={<InfoCircleFilled />} className='animate-pulse' onClick={showDrawer1} title='Project information '>Project information</Button>
                     <div className="self-stretch h-14 flex flex-row items-start justify-center py-0 px-5 box-border">
                         <img className="h-14 w-[65px] relative" alt="" src={chat} />
                     </div>
@@ -107,7 +115,7 @@ export default function Project() {
 
                 <div className=" w-[299px] self-stretch rounded-lg h-90  bg-orange-300 shadow-[0px_2px_4px_rgba(171,_190,_209,_0.2)] flex flex-col items-start justify-start py-6 px-4 gap-[16px]">
                     {/* <div className="self-stretch rounded-lg  shadow-[0px_2px_4px_rgba(171,_190,_209,_0.2)] flex flex-col items-start justify-start py-6 gap-[16px]"> */}
-                    <Button type='link' icon={<InfoCircleFilled />} onClick={showDrawer2} title='Project information '>Project information</Button>
+                    <Button type='link' icon={<InfoCircleFilled />} className='animate-pulse' onClick={showDrawer2} title='Project information '>Project information</Button>
                     <div className="self-stretch h-14 flex flex-row items-start justify-center py-0 px-5 box-border">
                         <img
                             className="h-14 w-[65px] relative"
@@ -143,12 +151,31 @@ export default function Project() {
                     }}
                     header={
                         <div>
-                            <h2 className='bg-gradient-to-br from-purple-800 via-pink-700 to-yellow-400'>Image of Website and Mobie App</h2>
+                            <h2 className='bg-gradient-to-br from-purple-800 via-pink-700 to-yellow-400'>Image of Mobie App</h2>
                         </div>
                     }
                     dataSource={images}
                     renderItem={(image, index) => (
                         <Image key={index} className="px-2" width={200} src={image} />
+                    )}
+                />
+                 <List
+                    itemLayout="vertical"
+                    size="large"
+                    pagination={{
+                        onChange: (page) => {
+                            console.log(page);
+                        },
+                        pageSize: 2,
+                    }}
+                    header={
+                        <div>
+                            <h2 className='bg-gradient-to-br from-purple-800 via-pink-700 to-yellow-400'>Image of Website App</h2>
+                        </div>
+                    }
+                    dataSource={images1}
+                    renderItem={(image, index) => (
+                        <Image key={index} className="px-2" width={400} height={200} src={image} />
                     )}
                 />
                 <h1 className='text-center text-3xl text-amber-500 text-'>Detail<br /></h1>
@@ -167,16 +194,36 @@ export default function Project() {
                     </h4> </span>
                 <h1 className='justify-start text-black font-medium'>Source code at GitHub:</h1>
                 <span className='justify-start text-black font-medium'>Mobie 👉:{'\t'}</span>
-                <Button type='link' icon={<GithubOutlined />} href='https://github.com/2602hoang/mobie_app-ReactNative' />
+                <Button type='link' className='animate-bounce' icon={<GithubOutlined />} href='https://github.com/2602hoang/mobie_app-ReactNative' />
                 <br />
                 <span className='justify-start text-black font-medium'>Website 👉:{'\t'}</span>
-                <Button type='link' icon={<GithubOutlined />} href='https://github.com/2602hoang/WEBAPP-ReactJS-Antd' />
+                <Button type='link'className='animate-bounce'  icon={<GithubOutlined />} href='https://github.com/2602hoang/WEBAPP-ReactJS-Antd' />
 
             </Drawer>
             <Drawer title="ZOLA CHAT APP" width={900} height={700} open={open1} onClose={onClose1}
                 placement="bottom"
 
             >
+                    <List
+                    itemLayout="vertical"
+                    size="large"
+                    pagination={{
+                        onChange: (page) => {
+                            console.log(page);
+                        },
+                        pageSize: 2,
+                    }}
+                    header={
+                        <div>
+                            <h2 className='w-[600px] bg-gradient-to-br from-purple-800 via-pink-700 to-yellow-400'>Image of Website App</h2>
+                        </div>
+                    }
+                    dataSource={imgs1}
+                    renderItem={(image, index) => (
+                        <Image key={index} className="px-2" width={300} height={200} src={image} />
+                    )}
+                />
+               
                 <List
                     itemLayout="vertical"
                     size="large"
@@ -189,7 +236,7 @@ export default function Project() {
                     }}
                     header={
                         <div>
-                            <h2 className='bg-gradient-to-br from-purple-800 via-pink-700 to-yellow-400'>Image of Website and Mobie App</h2>
+                            <h2 className='w-[600px] bg-gradient-to-br from-purple-800 via-pink-700 to-yellow-400'>Image of Mobie App</h2>
                         </div>
                     }
                     dataSource={imgs}
@@ -199,6 +246,8 @@ export default function Project() {
                         />
                     )}
                 />
+               
+                
                 <h1 className='mt-20 text-center text-3xl text-amber-500 text-'>Detail<br /></h1>
                 <span >
                     <h4 className='justify-start text-black font-medium'>
@@ -215,7 +264,7 @@ export default function Project() {
                 </span>
                 <h1 className='justify-start text-black font-medium'>Source code at GitHub:</h1>
                 <span className='justify-start text-black font-medium'>Mobie &Website 👉:{'\t'}</span>
-                <Button type='link' icon={<GithubOutlined />} href='https://github.com/2602hoang/zola-gui' />
+                <Button type='link'className='animate-bounce' icon={<GithubOutlined />} href='https://github.com/2602hoang/zola-gui' />
                 <br />
                 
             </Drawer>
@@ -234,7 +283,7 @@ export default function Project() {
                     }}
                     header={
                         <div>
-                            <h2 className='bg-gradient-to-br from-purple-800 via-pink-700 to-yellow-400'>Image of Website App</h2>
+                            <h2 className='w-[600px] bg-gradient-to-br from-purple-800 via-pink-700 to-yellow-400'>Image of Website App</h2>
                         </div>
                     }
                     dataSource={img}
@@ -242,6 +291,7 @@ export default function Project() {
                         <Image key={index} className="px-2" width={600} height={400} src={image} />
                     )}
                 />
+              
                  <h1 className='text-center text-3xl text-amber-500 text-'>Detail<br /></h1>
                 <span >
                     <h4 className='justify-start text-black font-medium'>
@@ -257,7 +307,7 @@ export default function Project() {
                 </span>
                 <h1 className='justify-start text-black font-medium'>Source code at GitHub:</h1>
                 <span className='justify-start text-black font-medium'>Website 👉:{'\t'}</span>
-                <Button type='link' icon={<GithubOutlined />} href='https://github.com/2602hoang/web_home_demo_JS-taiwin' />
+                <Button type='link' className='animate-bounce' icon={<GithubOutlined />} href='https://github.com/2602hoang/web_home_demo_JS-taiwin' />
                 <br />
             </Drawer>
 

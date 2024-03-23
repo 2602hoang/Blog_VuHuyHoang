@@ -52,7 +52,7 @@ export default function Content({ a, b, c }) {
                 {/* <div className='bg-gradient-to-br from-red-500 to-yellow-500'> */}
                 <div
                 
-                class='text-transparent text-center text-[90px] bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500 font-extrabold uppercase animate-slide '
+                class=' text-center text-[90px] bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500 font-extrabold uppercase animate-slide '
                 >VU HUY HOANG</div>
                 <br />
                 <br />
@@ -142,7 +142,7 @@ export default function Content({ a, b, c }) {
 
                             <Button type='link' onClick={() => {
                                 showDrawer();
-                            }} className=" transition duration-300 relative inline-block h-auto">
+                            }} className=" animate-pulse transition duration-300 relative inline-block h-auto">
                                 <span
                                     className=" text-transparent bg-clip-text bg-gradient-to-br from-purple-900 via-pink-700 to-yellow-400 uppercase animate-slide text-9xl"
                                 >{`ABOUT ME `}</span>
@@ -153,7 +153,7 @@ export default function Content({ a, b, c }) {
                             > VŨ HUY HOÀNG</span>
 
                         </h1>
-                        <div className="self-stretch relative text-base leading-[24px] text-neutral-grey">
+                        <div className=" font-bold self-stretch relative text-base leading-[24px] text-neutral-grey">
                             {a}
                             <br />
                             {b}
@@ -167,7 +167,7 @@ export default function Content({ a, b, c }) {
                         onClick={() => {
                             showModal();
                         }}
-                        className=" transition duration-300 bg-brand-primary w-25 h-16 relative  font-medium flex items-center justify-center min-w-[200px]">
+                        className="animate-bounce transition duration-300 bg-brand-primary w-25 h-16 relative  font-medium flex items-center justify-center min-w-[200px]">
                         View CV me
                     </Button>
 
@@ -180,7 +180,6 @@ export default function Content({ a, b, c }) {
                     
                         title="Personal CV, thank you for looking ✌️"
                         className='text-center w-max h-max '
-
                         open={open}
                         onOk={handleOk}
                         onCancel={handleCancel}
@@ -196,7 +195,7 @@ export default function Content({ a, b, c }) {
 
                         <img
                             //  width={200}
-                            className="h-full w-full relative max-w-full lg:flex-1 rounded-3xl border-orange-50 border-y-indigo-500 border-solid outline-offset-2 "
+                            className=" h-full w-full relative max-w-full lg:flex-1 rounded-3xl border-orange-50 border-y-indigo-500 border-solid outline-offset-2 "
                             loading="lazy"
                             alt=""
                             src={cv}
@@ -207,7 +206,7 @@ export default function Content({ a, b, c }) {
 
                 <Image
                     width={300}
-                    className="bg-center blur-sm h-[500px] w-[391px] relative max-w-full lg:flex-1 rounded-3xl border-orange-50 border-y-indigo-500 border-solid outline-offset-2 "
+                    className="     bg-center h-[500px] w-[391px] relative max-w-full lg:flex-1 rounded-3xl border-orange-50 border-y-indigo-500 border-solid outline-offset-2 "
                     loading="lazy"
                     alt=""
                     src={c}
