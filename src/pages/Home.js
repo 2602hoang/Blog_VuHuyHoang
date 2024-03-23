@@ -77,7 +77,7 @@ export default function Home() {
             <Header/>
 
 
-            <div className='items-center justify-center px-20 '>
+            <div className='items-center justify-center  '>
                 <Content
                     //    id="part-0"
                     
