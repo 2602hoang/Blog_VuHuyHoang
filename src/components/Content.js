@@ -139,13 +139,13 @@ export default function Content({ a, b, c }) {
                     <br />
 
                     <br />
-                    <p className=' text-center px-51 text-[17.5px] w-auto px-3 bg-yellow-200 text-yellow-800 rounded-full'>I'm a frontend developer who loves to make things look beautiful and working perfectly.
+                    <p className=' text-center px-51 text-[17.5px] w-auto px-2 bg-yellow-200 text-yellow-800 rounded-3xl'>I'm a frontend developer who loves to make things look beautiful and working perfectly.
                         I'm passionate about making websites that are easy to use and that provide the best user experience possible.
                         I also happen to be a creative person, which I use to inject a little bit of fun into every project.</p>
                     <List
                         itemLayout="horizontal"
                         size="large"
-                        className='h-96'
+                        className='h-96 pr-3'
                         pagination={{
                             onChange: (page) => {
                                 console.log(page);
