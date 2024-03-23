@@ -44,12 +44,8 @@ module.exports = {
       inherit: "inherit",
     },
     screens: {
-      
       mq1400: {
-        raw: "screen and (max-width: 1400px) ",
-      },
-      iphone61: {
-        raw: '(device-width: 1170px)'
+        raw: "screen and (max-width: 1400px)",
       },
       lg: {
         max: "1200px",
@@ -57,8 +53,8 @@ module.exports = {
       mq825: {
         raw: "screen and (max-width: 825px)",
       },
-      mq450: {
-        raw: "screen and (max-width: 450px)",
+      mq428: {
+        raw: "screen and (max-width: 428px)",
       },
     },
   },
