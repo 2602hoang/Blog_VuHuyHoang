@@ -42,8 +42,8 @@ export default function Footter() {
                     Contact:
                     </div>
                     <div className="self-stretch relative leading-[20px]">
-                        
-                       
+                        Address: Phu Nhuan,HCM
+                       <br/>
                         Email: vuhuyhoangboj@gmail.com
                         <br/>
                         Tel: +84 917 789 964

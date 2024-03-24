@@ -90,7 +90,7 @@ export default function Contac() {
         name="phone"
         id="phone"
         values="phone"
-        label="Phone Number"
+        label="Phone"
         rules={[
           {
             // required: true,

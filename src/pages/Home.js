@@ -8,7 +8,7 @@ import Footter from '../components/Footter';
 import Header from '../components/Header';
 import baone from '../asset/baone.png';
 import avata from "../asset/AVATA.png";
-
+import aaa from "../asset/AAA.mp4";
 import js from '../asset/js.png'
 import dev from '../asset/dev.png'
 import sql from '../asset/sql.png'
@@ -74,13 +74,13 @@ export default function Home() {
                 <p>Some contents...</p>
                 <p>Some contents...</p>
             </Drawer> */}
-            <Header/>
+            <Header />
 
 
             <div className='items-center justify-center  '>
                 <Content
                     //    id="part-0"
-                    
+
                     a="I am a student waiting for my diploma, so I can work full-time at the company."
 
                     b="Software Engineering major, mainly Front-End programming, user interface design for Website and Mobie applications.
@@ -181,28 +181,28 @@ export default function Home() {
                                 <div class="text-sm px-3 bg-green-200 text-green-800 rounded-full">React Native</div>
                                 <div class="text-sm px-3 bg-teal-200 text-teal-800 rounded-full">Antd</div>
                                 <div class="text-sm px-3 bg-blue-200 text-blue-800 rounded-full">Tailwindcss</div>
-                                
+
                                 {/* <div class="text-sm px-3 bg-purple-200 text-purple-800 rounded-full"></div> */}
                                 <div class=" space-x-2 space-y-2 text-center text-sm px-3 bg-purple-200 text-purple-800 rounded-full">Java/C#/C++</div>
                                 <div class="text-sm px-3 bg-pink-200 text-pink-800 rounded-full"> ⭐</div>
                             </div>
 
-                            
+
                             <div class="flex flex-col space-y-2">
-                            <div class="font-bold">Soft Skills</div>
-                            <div class=" animate-bounce flex space-x-6 text-center">
-                                <div class="text-sm px-3 bg-indigo-200 text-indigo-800 rounded-full" >Inquisitive, progressive</div>
-                                <div class="text-sm px-3 bg-red-200 text-red-800 rounded-full">Work under pressure</div>
-                                <div class="text-sm px-3 bg-orange-200 text-orange-800 rounded-full">Teamwork</div>
-                                <div class="text-sm px-3 bg-yellow-200 text-yellow-800 rounded-full">Ability to adapt quickly</div>
-                                <div class="text-sm px-3 bg-green-200 text-green-800 rounded-full">Quick acquisition</div>
-                                <div class="text-sm px-3 bg-teal-200 text-teal-800 rounded-full">Inquisitive, progressive</div>
+                                <div class="font-bold">Soft Skills</div>
+                                <div class=" animate-bounce flex space-x-6 text-center">
+                                    <div class="text-sm px-3 bg-indigo-200 text-indigo-800 rounded-full" >Inquisitive, progressive</div>
+                                    <div class="text-sm px-3 bg-red-200 text-red-800 rounded-full">Work under pressure</div>
+                                    <div class="text-sm px-3 bg-orange-200 text-orange-800 rounded-full">Teamwork</div>
+                                    <div class="text-sm px-3 bg-yellow-200 text-yellow-800 rounded-full">Ability to adapt quickly</div>
+                                    <div class="text-sm px-3 bg-green-200 text-green-800 rounded-full">Quick acquisition</div>
+                                    <div class="text-sm px-3 bg-teal-200 text-teal-800 rounded-full">Inquisitive, progressive</div>
+
+                                </div>
 
                             </div>
-
-                        </div>
-                        <div class="font-bold"> Foreign languager:</div>
-                        Reading and understanding English documents
+                            <div class="font-bold"> Foreign languager:</div>
+                            Reading and understanding English documents
                         </div>
                     </div>
                     <div className=" w-full h-[450px]  overflow-x-auto shrink-0 flex flex-row items-center justify-between py-0 px-5 box-border gap-[20px] max-w-full text-xl text-neutral-grey mq825:pl-9 mq825:pr-9 mq825:box-border mq1400:pl-[72px] mq1400:pr-[72px] mq1400:box-border">
@@ -267,11 +267,14 @@ export default function Home() {
             </section>
             {/* 4 */}
             <section className="h-auto self-stretch flex flex-row items-start justify-start pt-0 pb-12 pr-0 pl-px box-border max-w-full text-left text-17xl text-neutral-d-grey font-body-regular-body-3">
-                <div className="flex-1  bg-white flex flex-row items-center justify-between py-16 px-36 box-border max-w-full gap-[20px] mq825:pl-9 mq825:pr-9 mq825:box-border mq1400:flex-wrap mq1400:pl-[72px] mq1400:pr-[72px] mq1400:box-border">
+                <div className="flex-1  bg-white flex flex-col items-center justify-center py-16 px-36 box-border max-w-full gap-[20px] mq825:pl-9 mq825:pr-9 mq825:box-border mq1400:flex-wrap mq1400:pl-[72px] mq1400:pr-[72px] mq1400:box-border">
 
-                    <Calendar className=' w-auto h-auto  border-4 border-b-slate-900 rounded-md border-solid' onPanelChange={onPanelChange} />
-
-                    <div className="boder-2 r rounded-lg border-red-700 w-1/2 overflow-hidden shrink-0 flex flex-col items-center justify-start gap-[40px] max-w-full text-9xl mq825:gap-[20px_40px]">
+                    {/* <Calendar className=' w-auto h-auto  border-4 border-b-slate-900 rounded-md border-solid' onPanelChange={onPanelChange} /> */}
+                    {/* <video controls width="100%" height="70%">
+                        <source src={aaa} type="video/mp4" />
+                        Desculpe, seu navegador não suporta vídeos HTML5.
+                    </video> */}
+                    {/* <div className="boder-2 r rounded-lg border-red-700 w-1/2 overflow-hidden shrink-0 flex flex-col items-center justify-center gap-[40px] max-w-full text-9xl mq825:gap-[20px_40px]"> */}
                         {/* <div className="self-stretch overflow-hidden flex flex-row items-center justify-start gap-[30px] mq825:flex-wrap">
                             <UserOutlined />
                             <ContactusLegal
@@ -303,7 +306,7 @@ export default function Home() {
                             />
                         </div> */}
                         <Button type='text' icon={<FieldTimeOutlined />} className="boder-4 text-xxl rounded-lg border-red-700">{time}</Button>
-                    </div>
+                    {/* </div> */}
                 </div>
             </section>
 

@@ -115,7 +115,9 @@ export default function Content({ a, b, c }) {
                     </Modal>
                 </div>
 
-                <Image width={300} className=" bg-center h-[500px] w-[391px] relative max-w-full lg:flex-1 rounded-3xl border-orange-50 border-y-indigo-500 border-solid outline-offset-2 " loading="lazy" alt="" src={c} />
+                <Image width={300} className=" bg-center blur-sm
+
+h-[500px] w-[391px] relative max-w-full lg:flex-1 rounded-3xl border-orange-50 border-y-indigo-500 border-solid outline-offset-2 " loading="lazy" alt="" src={c} />
 
 
 
