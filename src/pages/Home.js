@@ -8,7 +8,7 @@ import Footter from '../components/Footter';
 import Header from '../components/Header';
 import baone from '../asset/baone.png';
 import avata from "../asset/AVATA.png";
-import aaa from "../asset/AAA.mp4";
+// import aaa from "../asset/AAA.mp4";
 import js from '../asset/js.png'
 import dev from '../asset/dev.png'
 import sql from '../asset/sql.png'
