@@ -36,10 +36,11 @@ export default function Contac() {
       formData.append("entry.2013422363", values.message);
 
       // Submit formData to Google Form URL
-      await fetch(formURL, {
-        method: "POST",
-        body: formData,
-      });
+      await axios.post(formURL, formData, {
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded'
+        }
+    });
       
       // Reset form fields after successful submission
       form.resetFields();
