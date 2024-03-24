@@ -52,7 +52,7 @@ export default function Content({ a, b, c }) {
 
                             <Button type='link' onClick={() => {
                                 showDrawer();
-                            }} className=" animate-pulse transition duration-300 relative inline-block h-auto">
+                            }} className=" animate-bounce skew-x-12 transition duration-300 relative inline-block h-auto">
                                 <span
                                     className=" text-transparent bg-clip-text bg-gradient-to-br from-purple-900 via-pink-700 to-yellow-400 uppercase animate-slide text-9xl"
                                 >{`ABOUT ME `}</span>
@@ -74,10 +74,11 @@ export default function Content({ a, b, c }) {
                     </div>
                     {/* <div className="rounded bg-brand-primary flex flex-row items-center justify-center  text-center text-base text-neutral-white"> */}
                     <Button
+                    type='primary'
                         onClick={() => {
                             showModal();
                         }}
-                        className="animate-bounce transition duration-300 bg-brand-primary w-25 h-16 relative  font-medium flex items-center justify-center min-w-[200px]">
+                        className="animate-pulse skew-x-6 skew-y-2 transition duration-300 bg-sky-600 w-25 h-16 relative  font-medium flex items-center justify-center min-w-[200px]">
                         View CV me
                     </Button>
 
@@ -114,7 +115,7 @@ export default function Content({ a, b, c }) {
                     </Modal>
                 </div>
 
-                <Image width={300} className="bg-center h-[500px] w-[391px] relative max-w-full lg:flex-1 rounded-3xl border-orange-50 border-y-indigo-500 border-solid outline-offset-2 " loading="lazy" alt="" src={c} />
+                <Image width={300} className=" bg-center h-[500px] w-[391px] relative max-w-full lg:flex-1 rounded-3xl border-orange-50 border-y-indigo-500 border-solid outline-offset-2 " loading="lazy" alt="" src={c} />
 
 
 
