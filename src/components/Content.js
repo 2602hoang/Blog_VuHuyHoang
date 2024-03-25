@@ -29,9 +29,10 @@ export default function Content({ a, b, c }) {
             marquee.start();
             // toggleButton.textContent = 'Pause Marquee';
         }
+        
     }
-
     toggleButton.addEventListener('click', toggleMarquee);
+    
 
     const [open, setOpen] = useState(false);
     const [open1, setOpen1] = useState(false);
