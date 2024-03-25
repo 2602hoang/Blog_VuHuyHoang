@@ -1,5 +1,5 @@
 import { Anchor, Button, Drawer, Image, List, Modal } from 'antd';
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import baone from "../asset/baone.png"
 import cv from "../asset/CV.png"
 import Footter from './Footter';
@@ -14,24 +14,25 @@ export default function Content({ a, b, c }) {
     //     setPlacement(e.target.left);
 
     //   };
-    const marquee = document.getElementById('myMarquee');
-    const toggleButton = document.getElementById('toggleButton');
+    const [isPaused, setIsPaused] = useState(false);
+    const marqueeRef = useRef(null);
 
-    let isPaused = false;
+    const toggleMarquee = () => {
+        setIsPaused(prevPaused => !prevPaused);
+    };
 
-    const toggleMarquee=()=> {
-        isPaused = !isPaused;
+    useEffect(() => {
+        const marquee = marqueeRef.current;
 
-        if (isPaused) {
-            marquee.stop();
-            // toggleButton.textContent = 'Resume Marquee';
-        } else {
-            marquee.start();
-            // toggleButton.textContent = 'Pause Marquee';
+        if (marquee) {
+            if (isPaused) {
+                marquee.stop();
+            } else {
+                marquee.start();
+            }
         }
-        
-    }
-    toggleButton.addEventListener('click', toggleMarquee);
+    }, [isPaused]);
+
     
 
     const [open, setOpen] = useState(false);
@@ -86,8 +87,8 @@ export default function Content({ a, b, c }) {
                         </h1>
 
                         <div className="h-auto font-bold self-stretch relative text-base leading-[24px] text-neutral-grey">
-                        <button id="toggleButton">
-                                <marquee id="myMarquee" direction="up" >
+                        <button id="toggleButton" onClick={toggleMarquee}>
+                                <marquee ref={marqueeRef} id="myMarquee" direction="up" >
                                     {a}
                                     <br />
                                     {b}
