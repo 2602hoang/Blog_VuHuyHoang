@@ -158,7 +158,7 @@ export default function Home() {
 
             {/* 3 */}
             <section className="self-stretch flex flex-row items-start justify-center  px-5 pb-10 box-border max-w-full text-center text-17xl text-neutral-d-grey font-body-regular-body-3">
-                <div className="w-[1152px] flex flex-col items-center justify-start gap-[16px] max-w-full">
+                <div className="w-full flex flex-col items-center justify-start gap-[16px] max-w-full">
                     <div id="part-2" className="w-[1150px] flex flex-col items-center justify-start py-0 px-5 box-border gap-[8px] max-w-full">
                         <h1 className="m-0 self-stretch relative text-inherit leading-[44px] font-semibold font-inherit mq825:text-10xl mq825:leading-[35px] mq450:text-3xl mq450:leading-[26px]">
                             SKILLS ABOUT ME
@@ -172,7 +172,9 @@ export default function Home() {
                         </div> */}
                         <div class="flex flex-col space-y-2">
                             <div class="font-bold">Programming Skills</div>
-                            <div class=" animate-bounce flex space-x-8 text-center">
+                            {/* <marquee  className="h-auto" > */}
+                            <div class=" animate-bounce  flex space-x-8 text-center">
+                                
                                 <div class=" text-sm px-3 bg-pink-200 text-pink-800 rounded-full"> ⭐</div>
                                 <div class="text-sm px-3 bg-indigo-200 text-indigo-800 rounded-full" >JavaScript</div>
                                 <div class="text-sm px-3 bg-red-200 text-red-800 rounded-full">HTML</div>
@@ -181,12 +183,12 @@ export default function Home() {
                                 <div class="text-sm px-3 bg-green-200 text-green-800 rounded-full">React Native</div>
                                 <div class="text-sm px-3 bg-teal-200 text-teal-800 rounded-full">Antd</div>
                                 <div class="text-sm px-3 bg-blue-200 text-blue-800 rounded-full">Tailwindcss</div>
-
+                                
                                 {/* <div class="text-sm px-3 bg-purple-200 text-purple-800 rounded-full"></div> */}
                                 <div class=" space-x-2 space-y-2 text-center text-sm px-3 bg-purple-200 text-purple-800 rounded-full">Java/C#/C++</div>
                                 <div class="text-sm px-3 bg-pink-200 text-pink-800 rounded-full"> ⭐</div>
                             </div>
-
+                            {/* </marquee > */}
 
                             <div class="flex flex-col space-y-2">
                                 <div class="font-bold">Soft Skills</div>

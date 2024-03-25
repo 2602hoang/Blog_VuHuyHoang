@@ -12,7 +12,27 @@ export default function Content({ a, b, c }) {
     // const [placement, setPlacement] = useState('left');
     // const onChange = (e) => {
     //     setPlacement(e.target.left);
+
     //   };
+    const marquee = document.getElementById('myMarquee');
+    const toggleButton = document.getElementById('toggleButton');
+
+    let isPaused = false;
+
+    const toggleMarquee=()=> {
+        isPaused = !isPaused;
+
+        if (isPaused) {
+            marquee.stop();
+            // toggleButton.textContent = 'Resume Marquee';
+        } else {
+            marquee.start();
+            // toggleButton.textContent = 'Pause Marquee';
+        }
+    }
+
+    toggleButton.addEventListener('click', toggleMarquee);
+
     const [open, setOpen] = useState(false);
     const [open1, setOpen1] = useState(false);
     const showModal = () => {
@@ -63,18 +83,24 @@ export default function Content({ a, b, c }) {
                             > VŨ HUY HOÀNG</span>
 
                         </h1>
-                        <div className=" font-bold self-stretch relative text-base leading-[24px] text-neutral-grey">
-                            {a}
-                            <br />
-                            {b}
 
+                        <div className="h-auto font-bold self-stretch relative text-base leading-[24px] text-neutral-grey">
+                        <button id="toggleButton">
+                                <marquee id="myMarquee" direction="up" >
+                                    {a}
+                                    <br />
+                                    {b}
+                                </marquee>
+                                
+                            </button>
                             {/* Where to grow your business as a photographer: site or social
                 media? */}
                         </div>
+
                     </div>
                     {/* <div className="rounded bg-brand-primary flex flex-row items-center justify-center  text-center text-base text-neutral-white"> */}
                     <Button
-                    type='primary'
+                        type='primary'
                         onClick={() => {
                             showModal();
                         }}
@@ -115,7 +141,7 @@ export default function Content({ a, b, c }) {
                     </Modal>
                 </div>
 
-                <Image width={300} className=" bg-center blur-sm
+                <Image width={300} className=" bg-center blur-sm 
 
 h-[500px] w-[391px] relative max-w-full lg:flex-1 rounded-3xl border-orange-50 border-y-indigo-500 border-solid outline-offset-2 " loading="lazy" alt="" src={c} />
 
@@ -153,7 +179,7 @@ h-[500px] w-[391px] relative max-w-full lg:flex-1 rounded-3xl border-orange-50 b
                             onChange: (page) => {
                                 console.log(page);
                             },
-                          
+
                             pageSize: 1,
                         }}
                         header={
