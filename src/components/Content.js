@@ -64,29 +64,31 @@ export default function Content({ a, b, c }) {
         <div
 
             id="part-5"
-            className="self-stretch flex flex-col items-center justify-center pt-5 px-5 pb-5 box-border max-w-full text-center text-17xl text-neutral-d-grey font-body-regular-body-3">
+            className="self-stretch flex   items-center justify-center pt-5 px-5 pb-5 box-border max-w-full text-center text-17xl text-neutral-d-grey font-body-regular-body-3">
 
 
-            <div className="w-4/5 flex flex-row items-center justify-center gap-[16px] max-w-full">
-            <Image width={300} className=" bg-center  h-[600px] w-1/2 relative max-w-full lg:flex-1 rounded-3xl border-orange-50 border-y-indigo-500 border-solid outline-offset-2 " loading="lazy" alt="" src={c} />
+            <div className="w-4/5 flex  items-center justify-center gap-[16px] max-w-full">
 
-                <div className="flex-1 w-auto flex-col items-start justify-start   ">
+                <div className="flex-1 w-auto flex-row items-start justify-start   ">
 
                     <div className="w-full self-stretch flex flex-col items-start justify-start gap-[16px]">
 
                         <h1 className="m-0 self-stretch relative text-inherit leading-[76px] font-semibold font-inherit mq825:text-32xl mq825:leading-[61px] mq450:text-19xl mq450:leading-[46px]">
 
-                            <Button type='link' onClick={() => {
+                          
+                            
+
+                            <span className='text-yellow-500'
+                            > VŨ HUY HOÀNG</span>
+                            <br></br>
+                            
+                              <Button type='link' onClick={() => {
                                 showDrawer();
                             }} className=" animate-bounce skew-x-12 transition duration-300 relative inline-block h-auto">
                                 <span
                                     className=" text-transparent bg-clip-text bg-gradient-to-br from-purple-900 via-pink-700 to-yellow-400 uppercase animate-slide text-9xl"
                                 >{`ABOUT ME `}</span>
                             </Button>
-                            <br></br>
-
-                            <span className='text-yellow-500'
-                            > VŨ HUY HOÀNG</span>
 
                         </h1>
 
@@ -112,7 +114,7 @@ export default function Content({ a, b, c }) {
                         className=' relative flex justify-center items-center cursor-pointer text-white font-SpaceGrotesk font-bold
                         bg-gradient-to-r from-orange-900 via-yellow-600 to-green-900
                         bg-clip-padding-box bg-clip-border bg-origin-border-box bg-size-200
-                        border border-transparent rounded-2xl
+                        border border-transparent rounded-2xl animate-pulse
                         py-4 px-8
                          '
                     >
@@ -125,11 +127,14 @@ export default function Content({ a, b, c }) {
 
 
                     {/* </div> */}
+
                 </div>
+                <Image width={300} className=" bg-center  h-[600px] w-1/2 relative max-w-full lg:flex-1 rounded-3xl border-orange-50 border-y-indigo-500 border-solid outline-offset-2 " loading="lazy" alt="" src={c} />
 
                 
 
             </div>
+
             <div className='w-max h-max bg-neutral-600'>
                     <Modal
 
