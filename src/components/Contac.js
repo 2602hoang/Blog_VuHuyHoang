@@ -1,6 +1,7 @@
 import React from 'react';
 import { Button, Form, Input, InputNumber } from 'antd';
 import axios from 'axios';
+import TextArea from 'antd/es/input/TextArea';
 const layout = {
   labelCol: {
     span: 8,
@@ -24,7 +25,10 @@ const validateMessages = {
 
 
 export default function Contac() {
-  const onFinish = async (values) => {
+  
+  const [form] = Form.useForm();
+  const onFinish = async (values,e) => {
+    if (e) e.preventDefault();
     try {
       const formURL = "https://docs.google.com/forms/d/e/1FAIpQLSdqmTV_KURUpUDL5qcoZfTb_FIzcI2LdMP3NiNRj-qXkljDoQ/formResponse"; // Google Form URL
       const formData = new FormData();
@@ -43,23 +47,32 @@ export default function Contac() {
     });
       
       // Reset form fields after successful submission
-      form.resetFields();
+      // form.resetFields();
 
       // Show success message to user
       alert('Form submitted successfully!');
-      
+      // console.log(formData);
+      resetFields(['name', 'phone', 'email', 'message']);
+     
     } 
     
     catch (error) {
+      // form.resetFields();  
       console.error('Error submitting form:', error);
-      alert('Form submitted successfully!');
+      resetFields(['name', 'phone', 'email', 'message']);
+      alert('Form submitted successfully!.Tks U');
+      // form.resetFields();
+      
     }
   };
+  const resetFields = (fields) => {
+    fields.forEach(field => {
+      form.setFieldsValue({ [field]: undefined });
+    });
+  };
 
-
-  const [form] = Form.useForm();
   return (
-    <Form {...layout} title='CONTACT' name="nest-messages" onFinish={onFinish} validateMessages={validateMessages}>
+    <Form {...layout} title='CONTACT' form={form}  name="nest-messages" onFinish={onFinish} validateMessages={validateMessages}>
       <Form.Item
         name="name"
         label="Name"
@@ -107,11 +120,18 @@ export default function Contac() {
       <Form.Item
         id="message"
         values="message"
+        rules={[
+          {
+            required: true,
+            message: 'Please input your message!',
+          },
+        ]}
         name="message" label="Message">
-        <Input.TextArea />
+        <TextArea autoSize={{minRows :3,
+        maxRows:6}} />
       </Form.Item>
       <Form.Item wrapperCol={{ ...layout.wrapperCol, offset: 8 }}>
-        <Button type="default" htmlType="submit">
+        <Button type="default" htmlType='submit' >
           Submit
         </Button>
       </Form.Item>

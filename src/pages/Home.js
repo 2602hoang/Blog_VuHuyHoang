@@ -1,4 +1,4 @@
-import { Anchor, Button, Calendar, Carousel, Drawer, FloatButton, Image, } from 'antd';
+import { Anchor, Button, Calendar, Carousel, ConfigProvider, Divider, Drawer, FloatButton, Image, Input, Space, } from 'antd';
 // import { Header } from 'antd/es/layout/layout';
 import React, { useRef, useEffect, useState } from 'react'
 import { useSpring, animated, to } from '@react-spring/web'
@@ -68,16 +68,23 @@ export default function Home() {
     return (
         // <Carousel effect="fade">
         // <div className="w-full relative bg-neutral-white overflow-hidden flex flex-row items-start justify-start" >
-        <div className="w-full relative bg-neutral-white overflow-hidden flex flex-col items-start justify-start tracking-[normal]">
+   
+    
+ 
+     
+       <div className=" w-full relative dark:bg-slate-800 overflow-hidden flex flex-col items-start justify-start tracking-[normal]">
             {/* <Drawer title="Basic Drawer" onClose={onClose} open={open}>
                 <p>Some contents...</p>
                 <p>Some contents...</p>
                 <p>Some contents...</p>
             </Drawer> */}
             <Header />
+            
+   
+            
+            {/* <div className="w-[1152px] self-stretch flex flex-row items-center justify-center pt-60 px-5 pb-10 box-border max-w-full text-center text-17xl text-neutral-d-grey font-body-regular-body-3"> */}
 
-
-            <div className='items-center justify-center  '>
+            {/* <div className='items-center justify-center  '> */}
                 <Content
                     //    id="part-0"
 
@@ -90,19 +97,19 @@ export default function Home() {
 
 
                 </Content>
-            </div>
+            {/* </div> */}
 
 
             {/* 0 */}
-            <section className="self-stretch flex flex-row items-start justify-center pt-60 px-5 pb-10 box-border max-w-full text-center text-17xl text-neutral-d-grey font-body-regular-body-3">
-                <div className="w-[1152px] flex flex-col items-start justify-start gap-[16px] max-w-full">
-                    <div id="part-1" className="self-stretch flex flex-row items-start justify-start py-0 px-[21px] box-border max-w-full">
-                        <div className="flex-1 flex flex-col items-start justify-start gap-[8px] ">
-                            <div className="text-xxl w-auto px-1/2  bg-purple-200 text-purple-800 rounded-full m-0 self-stretch relative text-inherit leading-[44px] font-semibold font-inherit mq825:text-10xl mq825:leading-[35px] mq450:text-3xl mq450:leading-[26px]">
+            <div className="self-stretch flex flex-row items-center justify-center pt-60  pb-10 box-border max-w-full text-center text-17xl text-neutral-d-grey font-body-regular-body-3">
+                <div className="w-4/5 flex flex-col items-center justify-center gap-[16px] max-w-full">
+                    <div id="part-1" className="self-stretch flex flex-col text-center items-center justify-center py-0 box-border max-w-full">
+                        <div className=" flex-1 flex flex-col text-center items-center justify-center gap-[8px] ">
+                            <div className="  text-xxl  text-center    bg-gradient-to-r from-orange-500 via-yellow-500 to-green-500 text-purple-800 rounded-lg m-0 self-stretch relative text-inherit leading-[44px] font-semibold font-inherit mq825:text-10xl mq825:leading-[35px] mq450:text-3xl mq450:leading-[26px]">
                                 OUTSTANDING PROJECT
                             </div>
-                            <div className=" font-bold self-stretch relative text-base leading-[24px] text-neutral-grey">
-                                Project scale during the learning process at school and personal work!
+                            <div className="     font-bold text-center self-stretch relative text-base leading-[24px] text-white">
+                                Project scale during the learning process at school and personal work !!!
                             </div>
                         </div>
                     </div>
@@ -150,17 +157,17 @@ export default function Home() {
                         /> */}
                     </div>
                 </div>
-            </section>
+            </div>
             {/* 1 */}
 
             <Project />
             {/* 2 */}
 
             {/* 3 */}
-            <section className="self-stretch flex flex-row items-start justify-center  px-5 pb-10 box-border max-w-full text-center text-17xl text-neutral-d-grey font-body-regular-body-3">
-                <div className="w-full flex flex-col items-center justify-start gap-[16px] max-w-full">
+            <div className="self-stretch flex flex-row items-start justify-center  px-5 pb-10 box-border max-w-full text-center text-17xl text-neutral-d-grey font-body-regular-body-3">
+                <div className="w-4/5 flex flex-col items-center justify-start gap-[16px] max-w-full">
                     <div id="part-2" className="w-[1150px] flex flex-col items-center justify-start py-0 px-5 box-border gap-[8px] max-w-full">
-                        <h1 className="m-0 self-stretch relative text-inherit leading-[44px] font-semibold font-inherit mq825:text-10xl mq825:leading-[35px] mq450:text-3xl mq450:leading-[26px]">
+                        <h1 className=" text-white m-0 self-stretch relative text-inherit leading-[44px] font-semibold font-inherit mq825:text-10xl mq825:leading-[35px] mq450:text-3xl mq450:leading-[26px]">
                             SKILLS ABOUT ME
                         </h1>
                         {/* <div className="w-[628px] relative text-base leading-[24px] font-semibold  text-orange-500 inline-block max-w-full">
@@ -171,9 +178,9 @@ export default function Home() {
                             Java/ C#/ C++/
                         </div> */}
                         <div class="flex flex-col space-y-2">
-                            <div class="font-bold">Programming Skills</div>
+                            <div class="font-bold text-white">Programming Skills</div>
                             {/* <marquee  className="h-auto" > */}
-                            <div class=" animate-bounce  flex space-x-8 text-center">
+                            <div class=" animate-bounce  flex space-x-6 text-center">
                                 
                                 <div class=" text-sm px-3 bg-pink-200 text-pink-800 rounded-full"> ⭐</div>
                                 <div class="text-sm px-3 bg-indigo-200 text-indigo-800 rounded-full" >JavaScript</div>
@@ -190,24 +197,29 @@ export default function Home() {
                             </div>
                             {/* </marquee > */}
 
-                            <div class="flex flex-col space-y-2">
-                                <div class="font-bold">Soft Skills</div>
-                                <div class=" animate-bounce flex space-x-6 text-center">
+                            <div class="flex flex-col space-y-">
+                                <div class="font-bold text-white">Soft Skills</div>
+                                <marquee  behavior="slide">
+                                <div class=" flex space-x-3 text-center">
+                                
                                     <div class="text-sm px-3 bg-indigo-200 text-indigo-800 rounded-full" >Inquisitive, progressive</div>
                                     <div class="text-sm px-3 bg-red-200 text-red-800 rounded-full">Work under pressure</div>
                                     <div class="text-sm px-3 bg-orange-200 text-orange-800 rounded-full">Teamwork</div>
+                                    
                                     <div class="text-sm px-3 bg-yellow-200 text-yellow-800 rounded-full">Ability to adapt quickly</div>
                                     <div class="text-sm px-3 bg-green-200 text-green-800 rounded-full">Quick acquisition</div>
                                     <div class="text-sm px-3 bg-teal-200 text-teal-800 rounded-full">Inquisitive, progressive</div>
-
+                                    
                                 </div>
-
+                                </marquee>
                             </div>
-                            <div class="font-bold"> Foreign languager:</div>
-                            Reading and understanding English documents
+                            <div class="font-bold text-white"> Foreign languager:</div>
+                            <div className="     font-bold text-center self-stretch relative text-base leading-[24px] text-white"> Reading and understanding English documents</div>
                         </div>
                     </div>
-                    <div className=" w-full h-[450px]  overflow-x-auto shrink-0 flex flex-row items-center justify-between py-0 px-5 box-border gap-[20px] max-w-full text-xl text-neutral-grey mq825:pl-9 mq825:pr-9 mq825:box-border mq1400:pl-[72px] mq1400:pr-[72px] mq1400:box-border">
+                   
+                    <div className=" w-max h-[450px]  overflow-x-auto shrink-0 flex flex-row items-center justify-between py-0  box-border gap-[20px] max-w-full text-xl text-neutral-grey mq825:pl-9 mq825:pr-9 mq825:box-border mq1400:pl-[72px] mq1400:pr-[72px] mq1400:box-border">
+                    {/* <marquee> */}
                         <Component
                             // image18="/image-18@2x.png"
                             image={dev}
@@ -263,13 +275,14 @@ export default function Home() {
                             image={dev}
                             imgs={taiwind}
                         />
-
+{/* </marquee> */}
                     </div>
+                    
                 </div>
-            </section>
+            </div>
             {/* 4 */}
-            <section className="h-auto self-stretch flex flex-row items-start justify-start pt-0 pb-12 pr-0 pl-px box-border max-w-full text-left text-17xl text-neutral-d-grey font-body-regular-body-3">
-                <div className="flex-1  bg-white flex flex-col items-center justify-center py-16 px-36 box-border max-w-full gap-[20px] mq825:pl-9 mq825:pr-9 mq825:box-border mq1400:flex-wrap mq1400:pl-[72px] mq1400:pr-[72px] mq1400:box-border">
+            <div className="h-auto self-stretch flex flex-row items-center justify-center pt-0 pb-12 pr-0 pl-px box-border max-w-full text-left text-17xl text-neutral-d-grey font-body-regular-body-3">
+                {/* <div className="flex-1  bg-white flex flex-col items-center justify-center py-16 px-36 box-border max-w-full gap-[20px] mq825:pl-9 mq825:pr-9 mq825:box-border mq1400:flex-wrap mq1400:pl-[72px] mq1400:pr-[72px] mq1400:box-border"> */}
 
                     {/* <Calendar className=' w-auto h-auto  border-4 border-b-slate-900 rounded-md border-solid' onPanelChange={onPanelChange} /> */}
                     {/* <video controls width="100%" height="70%">
@@ -307,18 +320,18 @@ export default function Home() {
                                 propOverflow="hidden"
                             />
                         </div> */}
-                        <Button type='text' icon={<FieldTimeOutlined />} className="boder-4 text-xxl rounded-lg border-red-700">{time}</Button>
+                        <Button type='text' icon={<FieldTimeOutlined />} className="text-white boder-4 text-xxl rounded-lg border-red-700">{time}</Button>
                     {/* </div> */}
-                </div>
-            </section>
-
+                {/* </div> */}
+            </div>
+          
 
             <FloatButton.BackTop />
-
+            
             <Footter ></Footter>
 
         </div>
-
+       
 
     )
 }

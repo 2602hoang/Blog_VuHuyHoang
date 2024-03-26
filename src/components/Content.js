@@ -33,7 +33,7 @@ export default function Content({ a, b, c }) {
         }
     }, [isPaused]);
 
-    
+
 
     const [open, setOpen] = useState(false);
     const [open1, setOpen1] = useState(false);
@@ -61,12 +61,13 @@ export default function Content({ a, b, c }) {
     return (
 
 
-        <section
+        <div
+
             id="part-5"
-            className="bg-white  self-stretch flex flex-row items-start justify-start pt-0 px-0 pb-10 box-border w-full text-left text-45xl text-neutral-d-grey font-body-regular-body-3">
+            className="self-stretch flex flex-row items-start justify-center pt-60 px-5 pb-10 box-border max-w-full text-center text-17xl text-neutral-d-grey font-body-regular-body-3">
 
 
-            <div className="flex-1 bg-white flex flex-row items-center justify-start py-24 px-36 box-border relative gap-[104px] max-w-full lg:flex-wrap mq825:gap-[104px_52px] mq825:py-[62px] mq825:px-[72px] mq825:box-border mq450:gap-[104px_26px] mq450:pl-5 mq450:pr-5 mq450:box-border">
+            <div className="w-4/5 flex flex-row items-center justify-center gap-[16px] max-w-full">
 
                 <div className="flex-1 flex flex-col items-start justify-start gap-[32px] min-w-[427px] max-w-full mq825:gap-[16px_32px] mq825:min-w-full">
                     <div className="self-stretch flex flex-col items-start justify-start gap-[16px]">
@@ -87,13 +88,13 @@ export default function Content({ a, b, c }) {
                         </h1>
 
                         <div className="h-auto font-bold self-stretch relative text-base leading-[24px] text-neutral-grey">
-                        <button id="toggleButton" onClick={toggleMarquee}>
+                            <button id="toggleButton" onClick={toggleMarquee}>
                                 <marquee ref={marqueeRef} id="myMarquee" direction="up" >
                                     {a}
                                     <br />
                                     {b}
                                 </marquee>
-                                
+
                             </button>
                             {/* Where to grow your business as a photographer: site or social
                 media? */}
@@ -102,11 +103,18 @@ export default function Content({ a, b, c }) {
                     </div>
                     {/* <div className="rounded bg-brand-primary flex flex-row items-center justify-center  text-center text-base text-neutral-white"> */}
                     <Button
-                        type='primary'
+                        type='text'
                         onClick={() => {
                             showModal();
                         }}
-                        className="animate-pulse skew-x-6 skew-y-2 transition duration-300 bg-sky-600 w-25 h-16 relative  font-medium flex items-center justify-center min-w-[200px]">
+                        // className="animate-pulse skew-x-6 skew-y-2 transition duration-300 bg-sky-600 w-25 h-16 relative  font-medium flex items-center justify-center min-w-[200px]"
+                        className='relative flex justify-center items-center cursor-pointer text-white font-SpaceGrotesk font-bold
+                        bg-gradient-to-r from-orange-500 via-yellow-500 to-green-500
+                        bg-clip-padding-box bg-clip-border bg-origin-border-box bg-size-200
+                        border border-transparent rounded-2xl
+                        py-4 px-8
+                         animate-pulse'
+                    >
                         View CV me
                     </Button>
 
@@ -252,9 +260,10 @@ h-[500px] w-[391px] relative max-w-full lg:flex-1 rounded-3xl border-orange-50 b
                 {/* </div> */}
             </div>
 
-        </section >
+        </div >
 
     );
+
 
 }
 
