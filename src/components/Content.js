@@ -64,13 +64,16 @@ export default function Content({ a, b, c }) {
         <div
 
             id="part-5"
-            className="self-stretch flex flex-row items-start justify-center pt-60 px-5 pb-10 box-border max-w-full text-center text-17xl text-neutral-d-grey font-body-regular-body-3">
+            className="self-stretch flex flex-col items-center justify-center pt-5 px-5 pb-5 box-border max-w-full text-center text-17xl text-neutral-d-grey font-body-regular-body-3">
 
 
             <div className="w-4/5 flex flex-row items-center justify-center gap-[16px] max-w-full">
+            <Image width={300} className=" bg-center  h-[600px] w-1/2 relative max-w-full lg:flex-1 rounded-3xl border-orange-50 border-y-indigo-500 border-solid outline-offset-2 " loading="lazy" alt="" src={c} />
 
-                <div className="flex-1 flex flex-col items-start justify-start gap-[32px] min-w-[427px] max-w-full mq825:gap-[16px_32px] mq825:min-w-full">
-                    <div className="self-stretch flex flex-col items-start justify-start gap-[16px]">
+                <div className="flex-1 w-auto flex-col items-start justify-start   ">
+
+                    <div className="w-full self-stretch flex flex-col items-start justify-start gap-[16px]">
+
                         <h1 className="m-0 self-stretch relative text-inherit leading-[76px] font-semibold font-inherit mq825:text-32xl mq825:leading-[61px] mq450:text-19xl mq450:leading-[46px]">
 
                             <Button type='link' onClick={() => {
@@ -87,8 +90,8 @@ export default function Content({ a, b, c }) {
 
                         </h1>
 
-                        <div className="h-auto font-bold self-stretch relative text-base leading-[24px] text-neutral-grey">
-                            <button id="toggleButton" onClick={toggleMarquee}>
+                        <div className="h-auto  font-bold self-stretch relative text-base leading-[24px] text-neutral-grey">
+                            <button className='h-[200px]' id="toggleButton" onClick={toggleMarquee}>
                                 <marquee ref={marqueeRef} id="myMarquee" direction="up" >
                                     {a}
                                     <br />
@@ -99,30 +102,35 @@ export default function Content({ a, b, c }) {
                             {/* Where to grow your business as a photographer: site or social
                 media? */}
                         </div>
-
-                    </div>
-                    {/* <div className="rounded bg-brand-primary flex flex-row items-center justify-center  text-center text-base text-neutral-white"> */}
-                    <Button
+                        
+                        <Button
                         type='text'
                         onClick={() => {
                             showModal();
                         }}
                         // className="animate-pulse skew-x-6 skew-y-2 transition duration-300 bg-sky-600 w-25 h-16 relative  font-medium flex items-center justify-center min-w-[200px]"
-                        className='relative flex justify-center items-center cursor-pointer text-white font-SpaceGrotesk font-bold
-                        bg-gradient-to-r from-orange-500 via-yellow-500 to-green-500
+                        className=' relative flex justify-center items-center cursor-pointer text-white font-SpaceGrotesk font-bold
+                        bg-gradient-to-r from-orange-900 via-yellow-600 to-green-900
                         bg-clip-padding-box bg-clip-border bg-origin-border-box bg-size-200
                         border border-transparent rounded-2xl
                         py-4 px-8
-                         animate-pulse'
+                         '
                     >
                         View CV me
-                    </Button>
+                       </Button>
+                    </div>
+                    {/* <div className="rounded bg-brand-primary flex flex-row items-center justify-center  text-center text-base text-neutral-white"> */}
 
+                    
 
 
                     {/* </div> */}
                 </div>
-                <div className='w-max h-max bg-neutral-600'>
+
+                
+
+            </div>
+            <div className='w-max h-max bg-neutral-600'>
                     <Modal
 
                         title="Personal CV, thank you for looking ✌️"
@@ -150,19 +158,7 @@ export default function Content({ a, b, c }) {
 
                     </Modal>
                 </div>
-
-                <Image width={300} className=" bg-center blur-sm 
-
-h-[500px] w-[391px] relative max-w-full lg:flex-1 rounded-3xl border-orange-50 border-y-indigo-500 border-solid outline-offset-2 " loading="lazy" alt="" src={c} />
-
-
-
-                {/* <div className="!m-[0] absolute bottom-[16px] left-[calc(50%_-_23px)] flex flex-row items-start justify-start gap-[8px] z-[1]"> */}
-                {/* 
-                <div className="h-2.5 w-2.5 relative rounded-[50%] bg-brand-primary" />
-                <div className="h-2.5 w-2.5 relative rounded-[50%] bg-forestgreen" />
-                <div className="h-2.5 w-2.5 relative rounded-[50%] bg-forestgreen" /> */}
-                <Drawer title="About Me  " width={900} onClose={onClose} open={open1}
+            <Drawer title="About Me  " width={428} onClose={onClose} open={open1}
                     placement="left"
                 // closable={false}
                 // extra={
@@ -254,11 +250,6 @@ h-[500px] w-[391px] relative max-w-full lg:flex-1 rounded-3xl border-orange-50 b
 
                     </div>
                 </Drawer>
-
-
-
-                {/* </div> */}
-            </div>
 
         </div >
 

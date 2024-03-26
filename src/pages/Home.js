@@ -68,35 +68,35 @@ export default function Home() {
     return (
         // <Carousel effect="fade">
         // <div className="w-full relative bg-neutral-white overflow-hidden flex flex-row items-start justify-start" >
-   
-    
- 
-     
-       <div className=" w-full relative dark:bg-slate-800 overflow-hidden flex flex-col items-start justify-start tracking-[normal]">
+
+
+
+
+        <div className=" w-full relative dark:bg-slate-800 overflow-hidden flex flex-col items-start justify-start tracking-[normal]">
             {/* <Drawer title="Basic Drawer" onClose={onClose} open={open}>
                 <p>Some contents...</p>
                 <p>Some contents...</p>
                 <p>Some contents...</p>
             </Drawer> */}
             <Header />
-            
-   
-            
+
+
+
             {/* <div className="w-[1152px] self-stretch flex flex-row items-center justify-center pt-60 px-5 pb-10 box-border max-w-full text-center text-17xl text-neutral-d-grey font-body-regular-body-3"> */}
 
             {/* <div className='items-center justify-center  '> */}
-                <Content
-                    //    id="part-0"
+            <Content
+                //    id="part-0"
 
-                    a="I am a student waiting for my diploma, so I can work full-time at the company."
+                a="I am a student waiting for my diploma, so I can work full-time at the company."
 
-                    b="Software Engineering major, mainly Front-End programming, user interface design for Website and Mobie applications.
+                b="Software Engineering major, mainly Front-End programming, user interface design for Website and Mobie applications.
                  Looking forward to developing, learning to become a full-stack programmer in the future."
-                    c={avata}
-                >
+                c={avata}
+            >
 
 
-                </Content>
+            </Content>
             {/* </div> */}
 
 
@@ -166,7 +166,7 @@ export default function Home() {
             {/* 3 */}
             <div className="self-stretch flex flex-row items-start justify-center  px-5 pb-10 box-border max-w-full text-center text-17xl text-neutral-d-grey font-body-regular-body-3">
                 <div className="w-4/5 flex flex-col items-center justify-start gap-[16px] max-w-full">
-                    <div id="part-2" className="w-[1150px] flex flex-col items-center justify-start py-0 px-5 box-border gap-[8px] max-w-full">
+                    <div id="part-2" className="w- flex flex-col items-center justify-start py-0 px-5 box-border gap-[8px] max-w-full">
                         <h1 className=" text-white m-0 self-stretch relative text-inherit leading-[44px] font-semibold font-inherit mq825:text-10xl mq825:leading-[35px] mq450:text-3xl mq450:leading-[26px]">
                             SKILLS ABOUT ME
                         </h1>
@@ -177,49 +177,60 @@ export default function Home() {
                             <br />
                             Java/ C#/ C++/
                         </div> */}
-                        <div class="flex flex-col space-y-2">
+                        {/* <div className='self-stretch flex flex-row items-start justify-between py-[25px] px-0 gap-[20px] mq825:flex-wrap mq825:justify-center'> */}
+                        <div class=" flex flex-col space-y-2">
                             <div class="font-bold text-white">Programming Skills</div>
-                            {/* <marquee  className="h-auto" > */}
-                            <div class=" animate-bounce  flex space-x-6 text-center">
-                                
-                                <div class=" text-sm px-3 bg-pink-200 text-pink-800 rounded-full"> ⭐</div>
-                                <div class="text-sm px-3 bg-indigo-200 text-indigo-800 rounded-full" >JavaScript</div>
-                                <div class="text-sm px-3 bg-red-200 text-red-800 rounded-full">HTML</div>
-                                <div class="text-sm px-3 bg-orange-200 text-orange-800 rounded-full">CSS</div>
-                                <div class="text-sm px-3 bg-yellow-200 text-yellow-800 rounded-full">ReactJS</div>
-                                <div class="text-sm px-3 bg-green-200 text-green-800 rounded-full">React Native</div>
-                                <div class="text-sm px-3 bg-teal-200 text-teal-800 rounded-full">Antd</div>
-                                <div class="text-sm px-3 bg-blue-200 text-blue-800 rounded-full">Tailwindcss</div>
-                                
-                                {/* <div class="text-sm px-3 bg-purple-200 text-purple-800 rounded-full"></div> */}
-                                <div class=" space-x-2 space-y-2 text-center text-sm px-3 bg-purple-200 text-purple-800 rounded-full">Java/C#/C++</div>
-                                <div class="text-sm px-3 bg-pink-200 text-pink-800 rounded-full"> ⭐</div>
+                            {/* <marquee  className="h-auto"  > */}
+                            <div class="flex-col flex text-center justify-center items-center animate-bounce  ">
+                                <div class="flex-row flex text-center justify-center items-center space-x-2  w-1/4 ">
+                                    <div class=" text-sm px-3 bg-pink-200 text-pink-800 rounded-full"> ⭐</div>
+                                    <div class="text-sm px-3 bg-indigo-200 text-indigo-800 rounded-full" >JavaScript</div>
+                                    <div class="text-sm px-3 bg-red-200 text-red-800 rounded-full">HTML</div>
+                                    <div class="text-sm px-3 bg-orange-200 text-orange-800 rounded-full">CSS</div>
+                                    <div class="text-sm px-3 bg-yellow-200 text-yellow-800 rounded-full">ReactJS</div>
+                                </div>
+                                <div class="flex-row flex text-center justify-center items-center space-x-2 pt-2 w-1/4 ">
+                                    <div class="text-sm px-3 bg-green-200 text-green-800 rounded-full">ReactNative</div>
+                                    <div class="text-sm px-3 bg-teal-200 text-teal-800 rounded-full">Antd</div>
+                                    <div class="text-sm px-3 bg-blue-200 text-blue-800 rounded-full">Tailwindcss</div>
+                                    <div class="text-sm px-3 bg-purple-200 text-purple-800 rounded-full">Java/C#/C++</div>
+                                    <div class="text-sm px-3 bg-pink-200 text-pink-800 rounded-full"> ⭐</div>
+                                </div>
                             </div>
+                            {/* <div class="text-sm px-3 bg-purple-200 text-purple-800 rounded-full"></div> */}
+
+
                             {/* </marquee > */}
 
                             <div class="flex flex-col space-y-">
                                 <div class="font-bold text-white">Soft Skills</div>
-                                <marquee  behavior="slide">
-                                <div class=" flex space-x-3 text-center">
-                                
-                                    <div class="text-sm px-3 bg-indigo-200 text-indigo-800 rounded-full" >Inquisitive, progressive</div>
-                                    <div class="text-sm px-3 bg-red-200 text-red-800 rounded-full">Work under pressure</div>
-                                    <div class="text-sm px-3 bg-orange-200 text-orange-800 rounded-full">Teamwork</div>
-                                    
-                                    <div class="text-sm px-3 bg-yellow-200 text-yellow-800 rounded-full">Ability to adapt quickly</div>
-                                    <div class="text-sm px-3 bg-green-200 text-green-800 rounded-full">Quick acquisition</div>
-                                    <div class="text-sm px-3 bg-teal-200 text-teal-800 rounded-full">Inquisitive, progressive</div>
-                                    
+
+                                <div class=" flex-col flex text-center justify-center items-center ">
+                                    <marquee direction="right">
+                                        <div class="flex-row flex text-center justify-center items-center   w-1/4 ">
+                                            <div class="text-sm px-3 bg-indigo-200 text-indigo-800 rounded-full" >Inquisitive, progressive</div>
+                                            <div class="text-sm px-3 bg-red-200 text-red-800 rounded-full">Work under pressure</div>
+                                            <div class="text-sm px-3 bg-orange-200 text-orange-800 rounded-full">Teamwork</div>
+                                        </div>
+                                    </marquee>
+                                    <marquee direction="left">
+                                        <div class="flex-row flex text-center justify-center items-center pt-2  w-1/4 ">
+                                            <div class="text-sm px-3 bg-yellow-200 text-yellow-800 rounded-full">Ability to adapt quickly</div>
+                                            <div class="text-sm px-3 bg-green-200 text-green-800 rounded-full">Quick acquisition</div>
+                                            <div class="text-sm px-3 bg-teal-200 text-teal-800 rounded-full">Inquisitive, progressive</div>
+                                        </div>
+                                    </marquee>
                                 </div>
-                                </marquee>
+
                             </div>
                             <div class="font-bold text-white"> Foreign languager:</div>
                             <div className="     font-bold text-center self-stretch relative text-base leading-[24px] text-white"> Reading and understanding English documents</div>
                         </div>
+
                     </div>
-                   
+
                     <div className=" w-max h-[450px]  overflow-x-auto shrink-0 flex flex-row items-center justify-between py-0  box-border gap-[20px] max-w-full text-xl text-neutral-grey mq825:pl-9 mq825:pr-9 mq825:box-border mq1400:pl-[72px] mq1400:pr-[72px] mq1400:box-border">
-                    {/* <marquee> */}
+                        {/* <marquee> */}
                         <Component
                             // image18="/image-18@2x.png"
                             image={dev}
@@ -275,22 +286,22 @@ export default function Home() {
                             image={dev}
                             imgs={taiwind}
                         />
-{/* </marquee> */}
+                        {/* </marquee> */}
                     </div>
-                    
+
                 </div>
             </div>
             {/* 4 */}
             <div className="h-auto self-stretch flex flex-row items-center justify-center pt-0 pb-12 pr-0 pl-px box-border max-w-full text-left text-17xl text-neutral-d-grey font-body-regular-body-3">
                 {/* <div className="flex-1  bg-white flex flex-col items-center justify-center py-16 px-36 box-border max-w-full gap-[20px] mq825:pl-9 mq825:pr-9 mq825:box-border mq1400:flex-wrap mq1400:pl-[72px] mq1400:pr-[72px] mq1400:box-border"> */}
 
-                    {/* <Calendar className=' w-auto h-auto  border-4 border-b-slate-900 rounded-md border-solid' onPanelChange={onPanelChange} /> */}
-                    {/* <video controls width="100%" height="70%">
+                {/* <Calendar className=' w-auto h-auto  border-4 border-b-slate-900 rounded-md border-solid' onPanelChange={onPanelChange} /> */}
+                {/* <video controls width="100%" height="70%">
                         <source src={aaa} type="video/mp4" />
                         Desculpe, seu navegador não suporta vídeos HTML5.
                     </video> */}
-                    {/* <div className="boder-2 r rounded-lg border-red-700 w-1/2 overflow-hidden shrink-0 flex flex-col items-center justify-center gap-[40px] max-w-full text-9xl mq825:gap-[20px_40px]"> */}
-                        {/* <div className="self-stretch overflow-hidden flex flex-row items-center justify-start gap-[30px] mq825:flex-wrap">
+                {/* <div className="boder-2 r rounded-lg border-red-700 w-1/2 overflow-hidden shrink-0 flex flex-col items-center justify-center gap-[40px] max-w-full text-9xl mq825:gap-[20px_40px]"> */}
+                {/* <div className="self-stretch overflow-hidden flex flex-row items-center justify-start gap-[30px] mq825:flex-wrap">
                             <UserOutlined />
                             <ContactusLegal
                                 icon={<UserOutlined />}
@@ -320,18 +331,18 @@ export default function Home() {
                                 propOverflow="hidden"
                             />
                         </div> */}
-                        <Button type='text' icon={<FieldTimeOutlined />} className="text-white boder-4 text-xxl rounded-lg border-red-700">{time}</Button>
-                    {/* </div> */}
+                <Button type='text' icon={<FieldTimeOutlined />} className="text-white boder-4 text-xxl rounded-lg border-red-700">{time}</Button>
+                {/* </div> */}
                 {/* </div> */}
             </div>
-          
+
 
             <FloatButton.BackTop />
-            
+
             <Footter ></Footter>
 
         </div>
-       
+
 
     )
 }

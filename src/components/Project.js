@@ -82,9 +82,9 @@ export default function Project() {
                         </h2>
                         <div className="self-stretch flex flex-row items-start justify-start py-0 px-2 text-sm text-neutral-grey">
                             <div className="inset-x-0 bottom-0 flex-1 relative leading-[20px]">
-                            <MobileOutlined style={{fontSize:'50px'}} />
+                            <MobileOutlined title='Mobie App' style={{fontSize:'50px'}} />
                             <PlusOutlined style={{fontSize:'25px'}}/>
-                            <LaptopOutlined style={{fontSize:'50px'}} />
+                            <LaptopOutlined title='Website App' style={{fontSize:'50px'}} />
                             </div>
 
                         </div>
@@ -104,9 +104,9 @@ export default function Project() {
                         </h2>
                         <div className="self-stretch flex flex-row items-start justify-start py-0 pr-[13px] pl-[13.5px] text-sm text-neutral-grey">
                             <div className="mt-20 flex-1 relative leading-[20px]">
-                            <MobileOutlined style={{fontSize:'50px'}} />
+                            <MobileOutlined title='Mobie App' style={{fontSize:'50px'}} />
                             <PlusOutlined style={{fontSize:'25px'}}/>
-                            <LaptopOutlined style={{fontSize:'50px'}} />
+                            <LaptopOutlined title='Website App' style={{fontSize:'50px'}} />
                             </div>
                         </div>
 
@@ -130,7 +130,7 @@ export default function Project() {
                             </h2>
                         </div>
                         <div className="self-stretch relative mt-20 text-sm leading-[20px] text-neutral-grey">
-                        <LaptopOutlined style={{fontSize:'50px'}} twoToneColor="#33FF33" />
+                        <LaptopOutlined title='Website App' style={{fontSize:'50px'}} twoToneColor="#33FF33" />
                         </div>
                     </div>
                     {/* </div> */}
