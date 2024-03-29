@@ -334,7 +334,7 @@ export default function Project() {
                     Project Information:<br/>
                     -Website development designed according to the basic website interface of the homepage.<br/>
                     -Develop a personal blog website including CV and programming skills advantages.<br/>
-                    link clone: >>>> &nbsp;&nbsp;&nbsp; <a>https://web-home-demo-js-taiwin.vercel.app/</a><br/>
+                    link clone: >>>> &nbsp;&nbsp;&nbsp; <a href='https://web-home-demo-js-taiwin.vercel.app/'>https://web-home-demo-js-taiwin.vercel.app/</a><br/>
                     Technologies used: HTML / CSS, JavaScript, ReactJS,TaiwindCss ,AntDesign.
                     </h4>
                 </span>
@@ -373,7 +373,7 @@ export default function Project() {
                     Project scale: Individual.<br/>
                     Team Size: 1 people<br/>
                     My location:(front-end + deploy)<br/>
-                   link clone:>>>>&nbsp;&nbsp;&nbsp; <a>https://cattiensa-clone.vercel.app/</a>
+                   link clone:>>>>&nbsp;&nbsp;&nbsp; <a href='https://cattiensa-clone.vercel.app/'>https://cattiensa-clone.vercel.app/</a>
                    <br/>
                     Technologies used: HTML / CSS, JavaScript, ReactJS,TaiwindCss ,AntDesign.
                     </h4>
