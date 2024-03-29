@@ -3,6 +3,9 @@ import gin from '../asset/gin.png';
 import data from "../asset/data"
 import user from '../asset/userTest.png';
 import logo from '../asset/AAA.png';
+import hoasen from '../asset/hình-nen.png';
+
+
 import hotpot from '../asset/hotpot.png'
 import chat from '../asset/chat.png'
 import { Button, Card, Carousel, Drawer, Image, List } from 'antd';
@@ -149,7 +152,7 @@ export default function Project() {
                         <img
                             className="h-14 w-[65px] relative"
                             alt=""
-                            src={logo}
+                            src={hoasen}
                         />
                     </div>
                     <div className="self-stretch flex flex-col items-start justify-start gap-[8px]">
