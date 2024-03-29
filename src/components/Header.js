@@ -54,7 +54,7 @@ export default function Header() {
 
 
     return (
-        <header className=" self-stretch bg-neutral-silver overflow-hidd   en flex flex-row items-center justify-between py-[22px]   box-border top-[0] z-[99] sticky gap-[20px]  text-center text-sm text-brand-primary font-body-regular-body-3 mq825:pl-[52px] mq825:pr-[60px] mq825:box-border mq450:pl-5 mq450:pr-5 mq450:box-border">
+        <script className=" self-stretch bg-neutral-silver overflow-hidd   en flex flex-row items-center justify-between py-[22px]   box-border top-[0] z-[99] sticky gap-[20px]  text-center text-sm text-brand-primary font-body-regular-body-3 mq825:pl-[52px] mq825:pr-[60px] mq825:box-border mq450:pl-5 mq450:pr-5 mq450:box-border">
            
            
             <div className="w-[196px] flex flex-col items-start justify-start mt-8 px-0 pb-0 box-border">
@@ -199,7 +199,7 @@ export default function Header() {
                         <FromSigup />
                 </Modal>
             </div>
-            <Anchor
+            {/* <Anchor
              direction="vertical"
              
             items={[
@@ -224,9 +224,9 @@ export default function Header() {
                     title: 'Contact',
                 },
             ]}
-        />
+        /> */}
             
             
-        </header>
+        </script>
     )
 }

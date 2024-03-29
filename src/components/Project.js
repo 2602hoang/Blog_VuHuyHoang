@@ -31,6 +31,13 @@ export default function Project() {
     const onClose2 = () => {
         setOpen2(false);
     };
+    const [open3, setOpen3] = useState(false);
+    const showDrawer3 = () => {
+        setOpen3(true);
+    };
+    const onClose3 = () => {
+        setOpen3(false);
+    };
     const onChange = (currentSlide) => {
         console.log(currentSlide);
     };
@@ -127,6 +134,28 @@ export default function Project() {
                         <div className="self-stretch flex flex-row items-start justify-start py-0 px-2.5">
                             <h2 className="m-0 flex-1 relative text-inherit leading-[36px] font-bold font-inherit mq450:text-3xl mq450:leading-[29px]">
                                 PERSONAL BLOG
+                            </h2>
+                        </div>
+                        <div className="self-stretch relative mt-20 text-sm leading-[20px] text-neutral-grey">
+                        <LaptopOutlined title='Website App' style={{fontSize:'50px'}} twoToneColor="#33FF33" />
+                        </div>
+                    </div>
+                    {/* </div> */}
+                </div>
+                <div className=" w-[299px] self-stretch rounded-lg h-90  bg-orange-300 shadow-[0px_2px_4px_rgba(171,_190,_209,_0.2)] flex flex-col items-start justify-start py-6 px-4 gap-[16px]">
+                    {/* <div className="self-stretch rounded-lg  shadow-[0px_2px_4px_rgba(171,_190,_209,_0.2)] flex flex-col items-start justify-start py-6 gap-[16px]"> */}
+                    <Button type='link' icon={<InfoCircleFilled />} className='animate-pulse' onClick={showDrawer3} title='Project information '>Project information</Button>
+                    <div className="self-stretch h-14 flex flex-row items-start justify-center py-0 px-5 box-border">
+                        <img
+                            className="h-14 w-[65px] relative"
+                            alt=""
+                            src={logo}
+                        />
+                    </div>
+                    <div className="self-stretch flex flex-col items-start justify-start gap-[8px]">
+                        <div className="self-stretch flex flex-row items-start justify-start py-0 px-2.5">
+                            <h2 className="m-0 flex-1 relative text-inherit leading-[36px] font-bold font-inherit mq450:text-3xl mq450:leading-[29px]">
+                                CATTIENSA_CLONE
                             </h2>
                         </div>
                         <div className="self-stretch relative mt-20 text-sm leading-[20px] text-neutral-grey">
@@ -301,7 +330,48 @@ export default function Project() {
                     -Develop a personal blog that introduces yourself.<br/>
                     Project Information:<br/>
                     -Website development designed according to the basic website interface of the homepage.<br/>
-                    -Develop a personal blog website including CV and programming skills advantages.
+                    -Develop a personal blog website including CV and programming skills advantages.<br/>
+                    link clone: >>>> &nbsp;&nbsp;&nbsp; <a>https://web-home-demo-js-taiwin.vercel.app/</a><br/>
+                    Technologies used: HTML / CSS, JavaScript, ReactJS,TaiwindCss ,AntDesign.
+                    </h4>
+                </span>
+                <h1 className='justify-start text-black font-medium'>Source code at GitHub:</h1>
+                <span className='justify-start text-black font-medium'>Website 👉:{'\t'}</span>
+                <Button type='link' className='animate-bounce' icon={<GithubOutlined />} href='https://github.com/2602hoang/web_home_demo_JS-taiwin' />
+                <br />
+            </Drawer>
+            <Drawer title="CATTIENSA_CLONE" width={900} open={open3} onClose={onClose3}
+                placement="right"
+
+            >
+                 {/* <List
+                    itemLayout="vertical"
+                    size="large"
+                    pagination={{
+                        onChange: (page) => {
+                            console.log(page);
+                        },
+                        pageSize: 2,
+                    }}
+                    header={
+                        <div>
+                            <h2 className='w-[600px] bg-gradient-to-br from-purple-800 via-pink-700 to-yellow-400'>Image of Website App</h2>
+                        </div>
+                    }
+                    dataSource={img}
+                    renderItem={(image, index) => (
+                        <Image key={index} className="px-2" width={600} height={400} src={image} />
+                    )}
+                /> */}
+              
+                 <h1 className='text-center text-3xl text-amber-500 text-'>Detail<br /></h1>
+                <span >
+                    <h4 className='justify-start text-black font-medium'>
+                    Project scale: Individual.<br/>
+                    Team Size: 1 people<br/>
+                    My location:(front-end + deploy)<br/>
+                   link clone:>>>>&nbsp;&nbsp;&nbsp; <a>https://cattiensa-clone.vercel.app/</a>
+                   <br/>
                     Technologies used: HTML / CSS, JavaScript, ReactJS,TaiwindCss ,AntDesign.
                     </h4>
                 </span>

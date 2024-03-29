@@ -69,18 +69,16 @@ export default function Home() {
         // <Carousel effect="fade">
         // <div className="w-full relative bg-neutral-white overflow-hidden flex flex-row items-start justify-start" >
 
-
-
-
+        
         <div className=" w-full relative dark:bg-slate-800 overflow-hidden flex flex-col items-start justify-start tracking-[normal]">
             {/* <Drawer title="Basic Drawer" onClose={onClose} open={open}>
                 <p>Some contents...</p>
                 <p>Some contents...</p>
                 <p>Some contents...</p>
             </Drawer> */}
-            <Header />
-
-
+        
+        <Header />
+        
 
             {/* <div className="w-[1152px] self-stretch flex flex-row items-center justify-center pt-60 px-5 pb-10 box-border max-w-full text-center text-17xl text-neutral-d-grey font-body-regular-body-3"> */}
 
