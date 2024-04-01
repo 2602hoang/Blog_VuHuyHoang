@@ -108,6 +108,7 @@ export default function Project() {
                     <div className="self-stretch h-14 flex flex-row items-start justify-center py-0 px-5 box-border">
                         <img className="h-14 w-[65px] relative" alt="" src={chat} />
                     </div>
+
                     <div className="self-stretch flex flex-col items-start justify-start gap-[8px]">
                         <h2 className=" m-0 self-stretch relative text-inherit leading-[36px] font-bold font-inherit mq450:text-3xl mq450:leading-[29px]">
                             ZOLA CHAT APP
@@ -143,11 +144,11 @@ export default function Project() {
                         <LaptopOutlined title='Website App' style={{fontSize:'50px'}} twoToneColor="#33FF33" />
                         </div>
                     </div>
-                    {/* </div> */}
+                 
                 </div>
                 <div className=" w-[299px] self-stretch rounded-lg h-90  bg-orange-300 shadow-[0px_2px_4px_rgba(171,_190,_209,_0.2)] flex flex-col items-start justify-start py-6 px-4 gap-[16px]">
                     {/* <div className="self-stretch rounded-lg  shadow-[0px_2px_4px_rgba(171,_190,_209,_0.2)] flex flex-col items-start justify-start py-6 gap-[16px]"> */}
-                    <Button type='link' icon={<InfoCircleFilled />} className='animate-pulse' onClick={showDrawer3} title='Project information '>Project information</Button>
+                    <Button type='link' icon={<InfoCircleFilled />} className='animate-pulse' onClick={showDrawer2} title='Project information '>Project information</Button>
                     <div className="self-stretch h-14 flex flex-row items-start justify-center py-0 px-5 box-border">
                         <img
                             className="h-14 w-[65px] relative"
@@ -158,15 +159,17 @@ export default function Project() {
                     <div className="self-stretch flex flex-col items-start justify-start gap-[8px]">
                         <div className="self-stretch flex flex-row items-start justify-start py-0 px-2.5">
                             <h2 className="m-0 flex-1 relative text-inherit leading-[36px] font-bold font-inherit mq450:text-3xl mq450:leading-[29px]">
-                                CATTIENSA_CLONE
+                                CAT TIEN SA CLONE
                             </h2>
                         </div>
                         <div className="self-stretch relative mt-20 text-sm leading-[20px] text-neutral-grey">
                         <LaptopOutlined title='Website App' style={{fontSize:'50px'}} twoToneColor="#33FF33" />
                         </div>
                     </div>
-                    {/* </div> */}
+                 
                 </div>
+                
+                
             </div>
             <Drawer title=" FOOD ORDERING APPLICATION FOR DISTRACTED RESTAURANTS " width={900} open={open} onClose={onClose}
                 placement="left"
