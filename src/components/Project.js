@@ -148,7 +148,7 @@ export default function Project() {
                 </div>
                 <div className=" w-[299px] self-stretch rounded-lg h-90  bg-orange-300 shadow-[0px_2px_4px_rgba(171,_190,_209,_0.2)] flex flex-col items-start justify-start py-6 px-4 gap-[16px]">
                     {/* <div className="self-stretch rounded-lg  shadow-[0px_2px_4px_rgba(171,_190,_209,_0.2)] flex flex-col items-start justify-start py-6 gap-[16px]"> */}
-                    <Button type='link' icon={<InfoCircleFilled />} className='animate-pulse' onClick={showDrawer2} title='Project information '>Project information</Button>
+                    <Button type='link' icon={<InfoCircleFilled />} className='animate-pulse' onClick={showDrawer3} title='Project information '>Project information</Button>
                     <div className="self-stretch h-14 flex flex-row items-start justify-center py-0 px-5 box-border">
                         <img
                             className="h-14 w-[65px] relative"
