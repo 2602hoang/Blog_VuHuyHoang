@@ -65,16 +65,42 @@ export default function Content({ a, b, c }) {
 
             id="part-5"
             className="self-stretch flex   items-center justify-center pt-5 px-5 pb-5 box-border max-w-full text-center text-17xl text-neutral-d-grey font-body-regular-body-3">
-
+                    
 
             <div className="w-4/5 flex  items-center justify-center gap-[16px] max-w-full">
+                
 
                 <div className="flex-1 w-auto flex-row items-start justify-start   ">
 
                     <div className="w-full self-stretch flex flex-col items-start justify-start gap-[16px]">
 
                         <h1 className="m-0 self-stretch relative text-inherit leading-[76px] font-semibold font-inherit mq825:text-32xl mq825:leading-[61px] mq450:text-19xl mq450:leading-[46px]">
-
+                        <Anchor
+             direction="horizontal"
+             className='my-2'
+            items={[
+                {
+                    key: 'part-5',
+                    href: '#part-5',
+                    title: 'About Me',
+                },
+                {
+                    key: 'part-1',
+                    href: '#part-1',
+                    title: 'Projects',
+                },
+                {
+                    key: 'part-2',
+                    href: '#part-2',
+                    title: 'Sklils',
+                },
+                {
+                    key: 'part-3',
+                    href: '#part-3',
+                    title: 'Contact',
+                },
+            ]}
+             />
                           
                             
 
@@ -163,13 +189,15 @@ export default function Content({ a, b, c }) {
 
                     </Modal>
                 </div>
-            <Drawer title="About Me  " width={428} onClose={onClose} open={open1}
+            <Drawer title="About Me  " className='justify-center items-center'  width={'auto'} onClose={onClose} open={open1}
                     placement="left"
                 // closable={false}
                 // extra={
                 //     <Button onClick={onClose}>Cancel</Button>
                 // }
                 >
+                      <div className="w-full mq825:w-full pt-96 flex flex-col items-center justify-center gap-[40px] text-left text-sm text-black font-body-regular-body-3 mq825:min-w-full mq1400:flex-1 mq450:gap-[20px_40px]">
+
                     {/* <div className='bg-gradient-to-br from-red-500 to-yellow-500'> */}
                     <div
 
@@ -179,9 +207,11 @@ export default function Content({ a, b, c }) {
                     <br />
 
                     <br />
-                    <p className=' text-center px-51 text-[17.5px] w-auto px-2 bg-yellow-200 text-yellow-800 rounded-3xl'>I'm a frontend developer who loves to make things look beautiful and working perfectly.
+                    <div className='mx-3 w-1/2 mq825:w-full'>
+                    <p className='mx-2 text-center px-51 text-[17.5px] w-auto px-2 bg-yellow-200 text-yellow-800 rounded-3xl'>I'm a frontend developer who loves to make things look beautiful and working perfectly.
                         I'm passionate about making websites that are easy to use and that provide the best user experience possible.
                         I also happen to be a creative person, which I use to inject a little bit of fun into every project.</p>
+                        </div>
                     <List
                         itemLayout="horizontal"
                         size="large"
@@ -253,6 +283,7 @@ export default function Content({ a, b, c }) {
                             </a>
                         </div>
 
+                    </div>
                     </div>
                 </Drawer>
 

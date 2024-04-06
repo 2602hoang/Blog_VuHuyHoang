@@ -76,6 +76,8 @@ export default function Home() {
                 <p>Some contents...</p>
                 <p>Some contents...</p>
             </Drawer> */}
+            
+            
         
         <Header />
         
@@ -83,6 +85,9 @@ export default function Home() {
             {/* <div className="w-[1152px] self-stretch flex flex-row items-center justify-center pt-60 px-5 pb-10 box-border max-w-full text-center text-17xl text-neutral-d-grey font-body-regular-body-3"> */}
 
             {/* <div className='items-center justify-center  '> */}
+            
+            
+            
             <Content
                 //    id="part-0"
 
@@ -96,11 +101,13 @@ export default function Home() {
 
             </Content>
             {/* </div> */}
+            
 
 
             {/* 0 */}
             <div className="self-stretch flex flex-row items-center justify-center pt-60  pb-10 box-border max-w-full text-center text-17xl text-neutral-d-grey font-body-regular-body-3">
                 <div className="w-4/5 flex flex-col items-center justify-center gap-[16px] max-w-full">
+                    
                     <div id="part-1" className="self-stretch flex flex-col text-center items-center justify-center py-0 box-border max-w-full">
                         <div className=" flex-1 flex flex-col text-center items-center justify-center gap-[8px] ">
                             <div className="  text-xxl  text-center    bg-gradient-to-r from-orange-500 via-yellow-500 to-green-500 text-purple-800 rounded-lg m-0 self-stretch relative text-inherit leading-[44px] font-semibold font-inherit mq825:text-10xl mq825:leading-[35px] mq450:text-3xl mq450:leading-[26px]">

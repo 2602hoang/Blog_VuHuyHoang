@@ -199,32 +199,7 @@ export default function Header() {
                         <FromSigup />
                 </Modal>
             </div>
-            {/* <Anchor
-             direction="vertical"
-             
-            items={[
-                {
-                    key: 'part-5',
-                    href: '#part-5',
-                    title: 'About Me',
-                },
-                {
-                    key: 'part-1',
-                    href: '#part-1',
-                    title: 'Projects',
-                },
-                {
-                    key: 'part-2',
-                    href: '#part-2',
-                    title: 'Sklils',
-                },
-                {
-                    key: 'part-3',
-                    href: '#part-3',
-                    title: 'Contact',
-                },
-            ]}
-        /> */}
+            
             
             
         </script>
