@@ -61,11 +61,11 @@ export default function Project() {
     }
     const imgs = [];
     for (let i = 1; i <= 3; i++) {
-        imgs.push(require(`../asset/${i}.png`));
+        imgs.push(require(`../asset/i${i}.png`));
     }
     const imgs1 = [];
     for (let i = 3; i <= 8; i++) {
-        imgs1.push(require(`../asset/${i}.png`));
+        imgs1.push(require(`../asset/i${i}.png`));
     }
     const img = [];
     for (let i = 1; i <= 7; i++) {
@@ -200,7 +200,7 @@ export default function Project() {
                 
                 
             </div>
-            <Drawer title=" FOOD ORDERING APPLICATION FOR DISTRACTED RESTAURANTS " width={900} open={open} onClose={onClose}
+            <Drawer id='#1' title=" FOOD ORDERING APPLICATION FOR DISTRACTED RESTAURANTS " width={900} open={open} onClose={onClose}
                 placement="left"
 
             >
@@ -264,8 +264,8 @@ export default function Project() {
                 <Button type='link'className='animate-bounce'  icon={<GithubOutlined />} href='https://github.com/2602hoang/WEBAPP-ReactJS-Antd' />
 
             </Drawer>
-            <Drawer title="ZOLA CHAT APP" width={900} height={700} open={open1} onClose={onClose1}
-                placement="bottom"
+            <Drawer id='#2' title="ZOLA CHAT APP" width={900} height={700} open={open1} onClose={onClose1}
+                placement="right"
 
             >
                     <List
